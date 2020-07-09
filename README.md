@@ -15,6 +15,6 @@ Javascript projects from basic to advanced on single repository.
 
 ### Variables
 
-> var
-> let
+> var <br/>
+> let <br/>
 > const
