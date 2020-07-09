@@ -13,7 +13,7 @@ Javascript projects from basic to advanced on single repository.
 > 1.  using index.html --> Link script file with HTML file and refresh the HTML file to run the javascript
 > 2.  using node --> try node script.js [make sure nodejs is installed on the system]
 
-### Hello World
+### Variables
 
 > var
 > let
