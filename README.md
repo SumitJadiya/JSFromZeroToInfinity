@@ -25,3 +25,7 @@ Javascript projects from basic to advanced on single repository.
 > && and || operator with if else
 > Ternary Operator
 > Coercion (truthy and falsy values) - Apart from undefined, NaN, null, 0, '' all are truthy value(returns true if placed inside if block).
+
+### functions
+
+> Calling and referencing
