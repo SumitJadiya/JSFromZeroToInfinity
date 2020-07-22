@@ -29,3 +29,4 @@ Javascript projects from basic to advanced on single repository.
 ### functions
 
 > Calling and referencing
+> Functions in variable
