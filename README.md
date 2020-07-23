@@ -30,3 +30,4 @@ Javascript projects from basic to advanced on single repository.
 
 > Calling and referencing
 > Functions in variable
+> Context
