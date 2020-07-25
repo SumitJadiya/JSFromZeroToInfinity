@@ -32,3 +32,4 @@ Javascript projects from basic to advanced on single repository.
 > Functions in variable
 > Context
 > Hoisting
+> Scope Chain
