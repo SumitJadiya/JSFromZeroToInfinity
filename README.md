@@ -44,3 +44,7 @@ Javascript projects from basic to advanced on single repository.
 
 > Basics
 > Function inside Object
+
+### Loops
+
+> Basic for loop
