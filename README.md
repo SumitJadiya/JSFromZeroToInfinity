@@ -48,3 +48,4 @@ Javascript projects from basic to advanced on single repository.
 ### Loops
 
 > Basic for loop
+> while and do while
