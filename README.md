@@ -21,31 +21,32 @@ Javascript projects from basic to advanced on single repository.
 
 ### Conditional
 
-> if else
-> && and || operator with if else
-> Ternary Operator
+> if else <br/>
+> && and || operator with if else<br/>
+> Ternary Operator<br/>
 > Coercion (truthy and falsy values) - Apart from undefined, NaN, null, 0, '' all are truthy value(returns true if placed inside if block).
 
 ### functions
 
-> Calling and referencing
-> Functions in variable
-> Context
-> Hoisting
-> Scope Chain
+> Calling and referencing<br/>
+> Functions in variable<br/>
+> Context<br/>
+> Hoisting<br/>
+> Scope Chain<br/>
 > This Keyword
 
 ### Array
 
-> Basics
+> Basics<br/>
 > Filter
 
 ### Object
 
-> Basics
+> Basics<br/>
 > Function inside Object
 
 ### Loops
 
-> Basic for loop
-> while and do while
+> Basic for loop<br/>
+> while and do while<br/>
+> For Each loop (not exactly loop but method for array)
