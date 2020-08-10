@@ -49,4 +49,5 @@ Javascript projects from basic to advanced on single repository.
 
 > Basic for loop<br/>
 > while and do while<br/>
-> For Each loop (not exactly loop but method for array)
+> For Each loop (not exactly loop but method for array)<br/>
+> For of and For in
