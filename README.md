@@ -55,3 +55,4 @@ Javascript projects from basic to advanced on single repository.
 ### DOM
 
 > DOM Manipulation using getElement and querySelector<br/>
+> Counter App
