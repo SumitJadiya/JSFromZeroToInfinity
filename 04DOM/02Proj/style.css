@@ -27,6 +27,8 @@ body {
 }
 
 .center {
+  text-align: center;
+  padding: 50px;
   min-width: 200px;
   height: 200px;
   color: #fff;
