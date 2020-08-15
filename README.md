@@ -44,6 +44,7 @@ Javascript projects from basic to advanced on single repository.
 
 > Basics<br/>
 > Function inside Object
+> New Keyword
 
 ### Loops
 
@@ -55,5 +56,5 @@ Javascript projects from basic to advanced on single repository.
 ### DOM
 
 > DOM Manipulation using getElement and querySelector<br/>
-> Counter App
+> Counter App <br/>
 > Color code seletor App
