@@ -66,3 +66,5 @@ Javascript projects from basic to advanced on single repository.
 > Self Executing Anonymous function --> IIFE <br/>
 > Lexical Scoping <br/>
 > Closure <br/>
+> Curring [--> name()()()] <br/>
+> Binding (or bind)<br/>
