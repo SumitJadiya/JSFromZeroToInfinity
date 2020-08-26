@@ -63,3 +63,4 @@ Javascript projects from basic to advanced on single repository.
 
 > Proto <br/>
 > Object Chain <br/>
+> Self Executing Anonymous function --> IIFE <br/>
