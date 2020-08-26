@@ -58,3 +58,8 @@ Javascript projects from basic to advanced on single repository.
 > DOM Manipulation using getElement and querySelector<br/>
 > Counter App <br/>
 > Color code seletor App
+
+### Intermediate Level
+
+> Proto <br/>
+> Object Chain <br/>
