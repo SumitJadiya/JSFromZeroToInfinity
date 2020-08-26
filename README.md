@@ -67,4 +67,5 @@ Javascript projects from basic to advanced on single repository.
 > Lexical Scoping <br/>
 > Closure <br/>
 > Curring [--> name()()()] <br/>
-> Binding (or bind)<br/>
+> Binding (or bind) <br/>
+> Price Sorting Project <br/>
