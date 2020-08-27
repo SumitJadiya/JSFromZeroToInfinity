@@ -9,3 +9,15 @@ body {
 .buttons {
   display: flex;
 }
+
+.form {
+  display: flex;
+  align-content: space-between;
+}
+
+.form__w-40 {
+  flex: 0.5;
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 1rem;
+}

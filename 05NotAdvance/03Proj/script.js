@@ -66,3 +66,25 @@ revBtn.addEventListener("click", () => {
     courses.sort((a, b) => b.price - a.price)
     generateList()
 })
+
+// Add course to list
+let course_name = document.querySelector(".course_name")
+let price = document.querySelector(".price")
+
+var addCourseToList = (course_name, course_price) => {
+    var obj = {
+        name: course_name,
+        price: course_price
+    }
+
+    courses.push(obj)
+}
+
+const submitBtn = document.querySelector('.submit-btn')
+submitBtn.addEventListener("click", () => {
+
+    addCourseToList(course_name.value, price.value)
+    generateList()
+    course_name.value = ""
+    price.value = ""
+})
