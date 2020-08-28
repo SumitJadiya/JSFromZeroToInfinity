@@ -70,3 +70,4 @@ Javascript projects from basic to advanced on single repository.
 > Binding (or bind) <br/>
 > Price Sorting Project <br/>
 > Scope <br/>
+> Strings <br/>
