@@ -71,3 +71,4 @@ Javascript projects from basic to advanced on single repository.
 > Price Sorting Project <br/>
 > Scope <br/>
 > Strings <br/>
+> Maps <br/>
