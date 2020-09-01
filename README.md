@@ -72,3 +72,4 @@ Javascript projects from basic to advanced on single repository.
 > Scope <br/>
 > Strings <br/>
 > Maps <br/>
+> Destructure <br/>
