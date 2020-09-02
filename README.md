@@ -74,3 +74,4 @@ Javascript projects from basic to advanced on single repository.
 > Maps <br/>
 > Destructure <br/>
 > Spread and REST <br/>
+> Class and Objects<br/>
