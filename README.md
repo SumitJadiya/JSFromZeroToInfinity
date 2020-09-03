@@ -86,3 +86,4 @@ Javascript projects from basic to advanced on single repository.
 > Modal <br/>
 > QnA section <br/>
 > Menu Project <br/>
+> Control Video <br/>
