@@ -83,3 +83,4 @@ Javascript projects from basic to advanced on single repository.
 > Review System <br />
 > Navbar <br/>
 > Sidebar <br/>
+> Modal <br/>
