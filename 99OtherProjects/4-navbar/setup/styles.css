@@ -219,7 +219,7 @@ nav {
     padding: 0;
   }
   .nav-toggle {
-    display: none;
+    display: visible;
   }
   .links {
     height: auto;
