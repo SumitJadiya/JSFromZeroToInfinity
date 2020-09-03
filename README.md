@@ -84,3 +84,5 @@ Javascript projects from basic to advanced on single repository.
 > Navbar <br/>
 > Sidebar <br/>
 > Modal <br/>
+> QnA section <br/>
+> Menu Project <br/>
