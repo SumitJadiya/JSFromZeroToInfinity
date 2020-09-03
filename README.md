@@ -82,3 +82,4 @@ Javascript projects from basic to advanced on single repository.
 > Counter <br/>
 > Review System <br />
 > Navbar <br/>
+> Sidebar <br/>
