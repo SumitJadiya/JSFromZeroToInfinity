@@ -37,3 +37,46 @@ const reviews = [
       "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
 ];
+
+let authorName = document.querySelector("#author")
+let jobName = document.querySelector("#job")
+let infoDetails = document.querySelector("#info")
+let image = document.querySelector("#person-img")
+let btns = document.querySelectorAll(".btn")
+let mainId = 0
+
+const showUser = person => {
+  user = reviews[person]
+  image.setAttribute("src", user.img)
+  authorName.textContent = user.name
+  jobName.textContent = user.job
+  infoDetails.textContent = user.text
+}
+
+btns.forEach(btn => {
+  btn.addEventListener("click", e => {
+    const style = e.currentTarget.classList;
+    switch (style.value) {
+      case "btn prev-btn":
+        mainId = mainId === 0 ? reviews.length - 1 : mainId - 1
+        break;
+      case "btn next-btn":
+        mainId = mainId === reviews.length - 1 ? 0 : mainId + 1
+        break;
+      case "btn random-btn":
+        mainId = randomNumber()
+        break;
+      default:
+        break;
+    }
+    showUser(mainId)
+  })
+})
+
+const randomNumber = () => {
+  return Math.floor(Math.random() * reviews.length)
+}
+
+window.addEventListener("load", () => {
+  showUser(mainId)
+})
