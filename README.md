@@ -75,3 +75,8 @@ Javascript projects from basic to advanced on single repository.
 > Destructure <br/>
 > Spread and REST <br/>
 > Class and Objects<br/>
+
+### Projects
+
+> Color Flipper <br/>
+> Counter <br/>
