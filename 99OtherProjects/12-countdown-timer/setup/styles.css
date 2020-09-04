@@ -213,7 +213,7 @@ Countdown Timer
   background: var(--clr-grey-1);
   color: var(--clr-white);
   margin-right: 1rem;
-  width: 5rem;
+  width: 6rem;
   height: 5rem;
   display: grid;
   place-items: center;
