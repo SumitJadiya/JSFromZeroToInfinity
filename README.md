@@ -15,75 +15,76 @@ Javascript projects from basic to advanced on single repository.
 
 ### Variables
 
-> var <br/>
-> let <br/>
-> const
+> 1.  var <br/>
+> 2.  let <br/>
+> 3.  const
 
 ### Conditional
 
-> if else <br/>
-> && and || operator with if else<br/>
-> Ternary Operator<br/>
-> Coercion (truthy and falsy values) - Apart from undefined, NaN, null, 0, '' all are truthy value(returns true if placed inside if block).
+> 1.  if else <br/>
+> 2.  && and || operator with if else<br/>
+> 3.  Ternary Operator<br/>
+> 4.  Coercion (truthy and falsy values) - Apart from undefined, NaN, null, 0, '' all are truthy value(returns true if placed inside if block).
 
 ### functions
 
-> Calling and referencing<br/>
-> Functions in variable<br/>
-> Context<br/>
-> Hoisting<br/>
-> Scope Chain<br/>
-> This Keyword
+> 1.  Calling and referencing<br/>
+> 2.  Functions in variable<br/>
+> 3.  Context<br/>
+> 4.  Hoisting<br/>
+> 5.  Scope Chain<br/>
+> 6.  This Keyword
 
 ### Array
 
-> Basics<br/>
-> Filter
+> 1.  Basics<br/>
+> 2.  Filter
 
 ### Object
 
-> Basics<br/>
-> Function inside Object
-> New Keyword
+> 1.  Basics<br/>
+> 2.  Function inside Object
+> 3.  New Keyword
 
 ### Loops
 
-> Basic for loop<br/>
-> while and do while<br/>
-> For Each loop (not exactly loop but method for array)<br/>
-> For of and For in
+> 1.  Basic for loop<br/>
+> 2.  while and do while<br/>
+> 3.  For Each loop (not exactly loop but method for array)<br/>
+> 4.  For of and For in
 
 ### DOM
 
-> DOM Manipulation using getElement and querySelector<br/>
-> Counter App <br/>
-> Color code seletor App
+> 1.  DOM Manipulation using getElement and querySelector<br/>
+> 2.  Counter App <br/>
+> 3.  Color code seletor App
 
 ### Intermediate Level
 
-> Proto <br/>
-> Object Chain <br/>
-> Self Executing Anonymous function --> IIFE <br/>
-> Lexical Scoping <br/>
-> Closure <br/>
-> Curring [--> name()()()] <br/>
-> Binding (or bind) <br/>
-> Price Sorting Project <br/>
-> Scope <br/>
-> Strings <br/>
-> Maps <br/>
-> Destructure <br/>
-> Spread and REST <br/>
-> Class and Objects<br/>
+> 1.  Proto <br/>
+> 2.  Object Chain <br/>
+> 3.  Self Executing Anonymous function --> IIFE <br/>
+> 4.  Lexical Scoping <br/>
+> 5.  Closure <br/>
+> 6.  Curring [--> name()()()] <br/>
+> 7.  Binding (or bind) <br/>
+> 8.  Price Sorting Project <br/>
+> 9.  Scope <br/>
+> 10. Strings <br/>
+> 11. Maps <br/>
+> 12. Destructure <br/>
+> 13. Spread and REST <br/>
+> 14. Class and Objects<br/>
+> 15. Inheritance <br/>
 
 ### Projects
 
-> Color Flipper <br/>
-> Counter <br/>
-> Review System <br />
-> Navbar <br/>
-> Sidebar <br/>
-> Modal <br/>
-> QnA section <br/>
-> Menu Project <br/>
-> Control Video <br/>
+> 1.  Color Flipper <br/>
+> 2.  Counter <br/>
+> 3.  Review System <br />
+> 4.  Navbar <br/>
+> 5.  Sidebar <br/>
+> 6.  Modal <br/>
+> 7.  QnA section <br/>
+> 8.  Menu Project <br/>
+> 9.  Control Video <br/>
