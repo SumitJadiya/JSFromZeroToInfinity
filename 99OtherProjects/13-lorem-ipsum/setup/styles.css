@@ -215,3 +215,7 @@ button {
 .result {
   margin-bottom: 2rem;
 }
+.error {
+  color: red;
+  visibility: hidden;
+}

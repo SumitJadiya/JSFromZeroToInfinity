@@ -3,13 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lorem Ipsum</title>
+    <title>Lorem Ipsum Generator</title>
 
     <!-- styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>lorem ipsum project</h1>
+    <section class="section-center">
+      <span>
+        <p class="error">Please enter valid value for lorem ipsum paragraph</p>
+      </span>
+      <h3>TIRED OF BORING LOREM IPSUM ?</h3>
+
+      <form class="lorem-form">
+        <label for="paragraph">Paragraphs:</label>
+        <input type="text" name="paragraph" id="paragraph" />
+        <button type="button" class="btn">Generate</button>
+      </form>
+      <article class="lorem-text"></article>
+    </section>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
