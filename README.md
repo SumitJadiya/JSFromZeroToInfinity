@@ -93,3 +93,4 @@ Javascript projects from basic to advanced on single repository.
 > 12. Countdown Timer <br/>
 > 13. Lorem Ipsum Generator <br/>
 > 14. Todo List <br/>
+> 15. Slider <br/>
