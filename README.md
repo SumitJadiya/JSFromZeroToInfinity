@@ -76,6 +76,7 @@ Javascript projects from basic to advanced on single repository.
 > 13. Spread and REST <br/>
 > 14. Class and Objects<br/>
 > 15. Inheritance <br/>
+> 16. Event - Promise, Async, Await <br/>
 
 ### Projects
 
@@ -94,3 +95,6 @@ Javascript projects from basic to advanced on single repository.
 > 13. Lorem Ipsum Generator <br/>
 > 14. Todo List <br/>
 > 15. Slider <br/>
+> 16. Slider-2 <br/>
+> 17. Stripe submenus <br/>
+> 18. Hotel Reservation using react <br/>
