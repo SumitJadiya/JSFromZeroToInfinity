@@ -77,6 +77,7 @@ Javascript projects from basic to advanced on single repository.
 > 14. Class and Objects<br/>
 > 15. Inheritance <br/>
 > 16. Event - Promise, Async, Await <br/>
+> 17. API Handling
 
 ### Projects
 
