@@ -20,7 +20,7 @@ const refreshScore = () => {
 
 const init = () => {
     score = 20;
-    number = Math.round(Math.random() * 20)
+    number = Math.trunc(Math.random() * 20) + 1
     document.body.style.backgroundColor = "#222"
     setMessage("Start guessing...")
     refreshScore()
