@@ -287,3 +287,183 @@ promise.catch(result => console.log(result)).then(result => console.log(result))
 // Func1
 // undefined
 */
+
+/*
+const arr = [1, 2, 4]
+console.log(arr)
+
+arr.push(10) // legal
+
+console.log(arr)
+arr = [12, 3, 5, 6] // illegal
+*/
+/*
+// constructor function / factory function
+function xyz(a) {
+    this.a = a
+
+    return this.a
+}
+
+console.log(xyz(10)) // factory function (returns normal value)
+
+let x = new xyz(10) // constructor function (return object)
+console.log(x)
+ */
+/*
+function x() {
+    let a = 110;
+    var b = 110;
+
+    function abc() {
+        console.log(a) // 120
+        console.log(b) // 120
+    }
+
+    a = 120;
+    b = 120;
+    return abc
+}
+a = 130;
+b = 130;
+
+let zyz = x()()
+
+ */
+/*
+let car = function (model) {
+    this.model = model
+}
+
+car.prototype.getModel = function () {
+    return this.model
+}
+
+let toyota = new car('toyota')
+console.log(toyota.getModel()) // inherited from parent
+
+
+let a = function (main) {
+    this.main = main;
+}
+
+a.prototype.getMain = function () {
+    return this.main
+}
+
+let x = new a(100)
+console.log(x.getMain()) // 100
+ */
+/*
+function main() {
+    setTimeout(function () {
+        console.log("object")
+    }, 0)
+    console.log("hello")
+}
+
+// hello
+
+call stack: GEC -> main()
+
+other env: setTimeout() ->
+
+// hello
+
+callback function vs normal function
+
+ */
+/*
+document.addEventListener( "click", ()=> (
+    console.log("object")
+))
+
+normal callback :
+-> other  -> callback queue -> event loop -> call stack
+
+promises callback :
+-> other  -> microtask queue -> event loop -> call stack
+
+microtask > callback
+*/
+
+/*
+// Throttling
+const mysleep = () => {
+
+    return new Promise(resolve => (
+        setTimeout(() => {
+            resolve("object")
+        }, 5000))
+    )
+}
+
+async function asyncCall() {
+
+    const result = await mysleep();
+    console.log(result);
+    console.log("hello")
+}
+
+asyncCall()
+*/
+// object 
+// hello
+
+/*
+const state = {
+    a:10
+}
+
+setState({a:20})
+
+
+const [state, kjasdhjk] = useState(0)
+
+const ab = () =>{
+    kjasdhjk(10)
+    console.log(state) // 10
+}
+*/
+
+/*
+- define
+- life cycle methods
+
+*/
+
+/*
+Currying transforms a function into a sequence of nesting functions. Basically, it converts a function
+
+from this:f(a,b,c)
+to this: f(a)(b)(c)
+
+It involves taking a function with multiple arguments and returning a sequence of nested functions, each taking a single argument, eventually resolving to a value.
+
+normal function:
+*/
+
+/* function multiply(a, b, c) {
+    return a * b * c
+}
+
+console.log(multiply(2, 3, 4)) // an
+ */
+
+/*
+// Currying:
+function multiply(a) {
+    return (b) => {
+        return (c) => {
+            return a * b * c
+        }
+    }
+}
+
+let product = multiply(2)(3)
+console.log(multiply(2)(3)(4)) // 24
+console.log(multiply(2, 3, 4)) // an
+
+console.log(product(4))
+
+ */
