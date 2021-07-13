@@ -19,6 +19,10 @@ Javascript projects from basic to advanced on single repository.
 > 2.  let <br/>
 > 3.  const
 
+### Internal Working of JavaScript
+
+> <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/05scopeChain.js"> Scope Chain </a><br/>
+
 ### Conditional
 
 > 1.  if else <br/>
@@ -32,8 +36,7 @@ Javascript projects from basic to advanced on single repository.
 > 2.  Functions in variable<br/>
 > 3.  Context<br/>
 > 4.  Hoisting<br/>
-> 5.  Scope Chain<br/>
-> 6.  This Keyword
+> 5.  This Keyword
 
 ### Array
 
