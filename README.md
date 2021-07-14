@@ -21,7 +21,8 @@ Javascript projects from basic to advanced on single repository.
 
 ### Internal Working of JavaScript
 
-> <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/05scopeChain.js"> Scope Chain </a><br/>
+> <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/05scopeChain.js"> Scope Chain </a> <br/>
+> <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
 ### Conditional
 
@@ -35,8 +36,7 @@ Javascript projects from basic to advanced on single repository.
 > 1.  Calling and referencing<br/>
 > 2.  Functions in variable<br/>
 > 3.  Context<br/>
-> 4.  Hoisting<br/>
-> 5.  This Keyword
+> 4.  This Keyword
 
 ### Array
 
