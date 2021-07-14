@@ -1,3 +1,14 @@
+/*
+Hoisting:
+process of accessing the variables/methods even before declaration
+
+Temporal Dead Zone:
+zone where let/const variables are not safe for use.
+
+Why Hoisting:
+maybe to use function even before declarations
+*/
+
 // Global context
 /* Example 1 */
 var num = 2;
@@ -42,3 +53,12 @@ function sayMyName() {
 }
 
 console.log(name) // Sumit
+
+
+/* Temporal Dead Zone */
+const myName = "sumit"
+if (myName === "sumit") {
+    // Temporal Dead Zone
+    console.log(`this is my ${job}`) // Reference error 
+    const job = "Engineer"
+}
