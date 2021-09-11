@@ -1,26 +1,31 @@
 /*
-This keyword/variable:
-Spacial variable that is created for every execution context. Takes the value of the owner of the function in which this keyword is used. 
-This keyword
-    - is used to access the properties of an object.
-    - is used to access the methods of an object.
-    - is used to access the values of an object.
-    - is used to access the prototype of an object.
-    - is used to access the superclass of an object.
+    ---------------------
+    This keyword/variable
+    ---------------------
+        Special variable that is created for every execution context.
+        Takes the value of the owner of the function in which this keyword is used. 
 
-Value of this keyword is not static.
+        This keyword
+            - is used to access the properties of an object.
+            - is used to access the methods of an object.
+            - is used to access the values of an object.
+            - is used to access the prototype of an object.
+            - is used to access the superclass of an object.
 
-for Method -> this [points to object calling the method]
-for function -> this [points to undefined (strict mode) or global/window (non-strict mode)]
-for arrow -> this [points to surrounding function]
+        Value of this keyword is not static.
+
+        for Method : this [points to object calling the method]
+        for function : this [points to undefined (strict mode) or global/window (non-strict mode)]
+        for arrow : this [points to surrounding function]
 */
 
-console.log("game", this); // access to global context
-
 var game = "basketball"
+console.log("game", this.game); // access to global context // game basketball
+
 
 function sayName() {
-    var name = "Sumit"
-    console.log(this);
+    var firstName = "Sumit"
+    console.log(this.game); // basketball
+    console.log(this.firstName); // undefined
 }
 sayName()

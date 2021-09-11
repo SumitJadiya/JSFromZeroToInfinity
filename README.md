@@ -38,8 +38,8 @@ Environment in which a piece of JS is executed. Stores all the necessary informa
 Inside Execution Context :
 
 - Variable Environment [let, const and var declaration, Functions, arguments object]
-- <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/05scopeChain.js"> Scope Chain </a> <br/>
-- <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/06thisKeyword.js"> This Keyword </a><br/>
+- <a href="./03Intermediate/05scopeChain.js"> Scope Chain </a> <br/>
+- <a href="./03Intermediate/06thisKeyword.js"> This Keyword </a><br/>
 
 ### Hoisting :
 
@@ -54,7 +54,44 @@ Temporal Dead Zone :
 All the let/const variable get their own TDZ until the line where it is defined. The variable is only safe to use after TDZ.
 TDZ makes it easier to avoid and catch errors.
 
-<a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/04hoisting.js"> Hoisting </a><br/>
+More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
+
+### This Keyword :
+
+Special variable that is created for every execution context (every function). Takes the value of (points to) the "owner" of the function in which the "this" keyword is used.
+
+Method : this = <Object that is calling the method>
+Simple function call : this = undefined
+Arrow function : this = <this of surrounding function (lexical this)>
+Event Listener : this = <DOM element that the handler is attached to>
+
+More details :
+<a href="./03Intermediate/06thisKeyword.js">This keyword basics </a>
+<a href="./03Intermediate/15thisAgain.js">This keyword example</a>
+
+Regular Function vs Arrow Function :
+Regular fn has its own this keyword whereas arrow function inherits this keyword from parent scope.
+
+### Primitives vs Objects (Reference)
+
+Primitives :
+
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+- Symbol
+- Bigint
+
+Reference Types :
+
+- Object literal
+- Arrays
+- Functions
+  .. etc
+
+Primitive type stored in call stack(EC) and reference type are stored in heap.
 
 ### Conditional
 
