@@ -1,12 +1,18 @@
 /*
-Hoisting:
-process of accessing the variables/methods even before declaration
+    --------
+    Hoisting
+    --------
+        process of accessing the variables/methods even before declaration
 
-Temporal Dead Zone:
-zone where let/const variables are not safe for use.
+    -------------------
+    Temporal Dead Zone
+    -------------------
+        zone where let/const variables are not safe for use.
 
-Why Hoisting:
-maybe to use function even before declarations
+    ------------
+    Why Hoisting
+    ------------
+        using function even before declarations
 */
 
 // Global context

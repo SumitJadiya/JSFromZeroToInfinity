@@ -1,29 +1,60 @@
 # JSTube
 
-Javascript projects from basic to advanced on single repository.
+### Javascript Overview :
 
-1. Hello World
+- High Level [Developer need not to manage resources, everything happens automatically]
+- Garbage Collected [automatic garbage collection]
+- Interpreted or JIT compiled [Entire code is converted into machine code at once, then executed immediately]
+- Multi paradigm [it allows all the available paradigms i.e. oop, procedural, functional]
+- Prototype-based object-oriented
+- First Class Functions [functions treated as variables]
+- Dynamically typed [no data type definitions, types become known at runtime]
+- Single Threaded
+- Non blocking event loop
 
----
+### Javascript Engine :
 
-### Hello World
+- Parsing [code is parsed into AST - Abstract Syntax Tree]
+- Compilation [takes parsed code (AST) and compiles it to Machine Code]
+- Execution [execution happens in call stack]
+- Optimization [never ending process loop. takes current unoptimized code and returns optimized code to compiler]
 
-> We can run js code using two options :
->
-> 1.  using index.html --> Link script file with HTML file and refresh the HTML file to run the javascript
-> 2.  using node --> try node script.js [make sure nodejs is installed on the system]
+### Javascript Runtime :
 
-### Variables
+Runtime in the browser has :
 
-> 1.  var <br/>
-> 2.  let <br/>
-> 3.  const
+- Engine [Heap, Call Stack]
+- WEB APIs [DOM, Timers, Fetch API, . . . ]
+- Callback Queue [onclick, timer, . . . ]
 
-### Internal Working of JavaScript
+### Execution Context :
 
-> 1. <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/05scopeChain.js"> Scope Chain </a> <br/>
-> 2. <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/04hoisting.js"> Hoisting </a><br/>
-> 3. <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/06thisKeyword.js"> This Keyword </a><br/>
+Environment in which a piece of JS is executed. Stores all the necessary information for some code to be executed.
+
+- Global Execution context (i.e. top level) is created for code that is not inside any function.
+- One execution context is created for each function call.
+- Execution of functions (which are called) and waiting for callbacks (events)
+
+Inside Execution Context :
+
+- Variable Environment [let, const and var declaration, Functions, arguments object]
+- <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/05scopeChain.js"> Scope Chain </a> <br/>
+- <a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/06thisKeyword.js"> This Keyword </a><br/>
+
+### Hoisting :
+
+Makes some variables accessible/usable in the code even before they actually declared.
+
+Function declaration : Yes [value -> actual function]
+var variables : Yes [value -> undefined]
+let and const variables : No [technically, yes. But the value is <uninitialized> as they are placed in Temporal Dead Zone]
+function expressions and arrow functions : [depends if they uses var or let/const]
+
+Temporal Dead Zone :
+All the let/const variable get their own TDZ until the line where it is defined. The variable is only safe to use after TDZ.
+TDZ makes it easier to avoid and catch errors.
+
+<a href="https://github.com/SumitJadiya/JSTube/blob/master/03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
 ### Conditional
 
@@ -82,7 +113,7 @@ Javascript projects from basic to advanced on single repository.
 > 16. Event - Promise, Async, Await <br/>
 > 17. API Handling
 
-### Projects
+### Javascript projects
 
 > 1.  Color Flipper <br/>
 > 2.  Counter <br/>
@@ -101,7 +132,6 @@ Javascript projects from basic to advanced on single repository.
 > 15. Slider <br/>
 > 16. Slider-2 <br/>
 > 17. Stripe submenus <br/>
-> 18. Hotel Reservation using react <br/>
 
 ### Guess Number Project
 

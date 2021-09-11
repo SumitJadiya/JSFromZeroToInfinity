@@ -1,28 +1,41 @@
-/*
-Scope:
-Scope is an space or environment where the variable is declared.
+/* 
+    -------------
+    SCOPE CHAIN
+    -------------
 
-Lexical Scope:
-A lexical scope in JavaScript means that a variable defined outside a function can be accessible inside another function defined after the variable declaration. But the opposite is not true; the variables defined inside a function will not be accessible outside that function.
-------------------------------------------------------------------------------------------------------------------------------------------------------
+        SCOPE : 
+        Space or environment in which a certain variable is declared (variable env in case of functions).
 
-There are three types of scope:
-1. Global Scope -> This is when we define any variable outside any function or block. Global scope are accessible everywhere.
+        SCOPE OF VARIABLE : 
+        Entire region where a certain variable is accessible.
 
-2. Function Scope -> Variables are accessible only inside the functions not outside. (Also called local scope)
+        LEXICAL SCOPE : 
+        It means that a variable defined outside a function can be accessible inside another function defined after the variable declaration. But the opposite is not true; the variables defined inside a function will not be accessible outside that function.
 
-3. Block Scope -> Variables are accessible only within blocks (if/loops). let and const are block scope variables. Functions are also block scope in strict mode.
+    ----------------
+    Types of SCOPES 
+    ----------------
 
-Note: let and const are block scopes whereas var is function scope.
+        1. Global SCOPE : This is when we define any variable outside any function or block. Global scope are accessible everywhere.
+        2. Function SCOPE : Variables are accessible only inside the functions not outside. (Also called local scope)
+        3. Block SCOPE : Variables are accessible only within blocks (if/loops). let and const are block scope variables. Functions are also block scope (only in strict mode).
 
-------------------------------------------------------------------------------------------------------------------------------------------------------
-Scope Chain vs Call Stack:
+        Note: let and const are block scopes whereas var is function scope.
 
-in example 2, 
-Global Scope : variable: first, function: firstMethod and thirdMethod
-firstMethod Execution Context :  variable: second, function: secondMethod
-secondMethod Execution Context : variable: third
-thirdMethod Execution Context : variable: fourth
+    --------------------------
+    SCOPE Chain vs Call Stack  
+    --------------------------
+
+        (In Example 2)
+
+        Global Scope : variable - first, function - firstMethod and thirdMethod
+        firstMethod EC :  variable - second, function - secondMethod
+        secondMethod EC : variable - third
+        thirdMethod EC : variable - fourth
+
+        note - 
+        1. EC: Execution Context
+        2. reference error if variable is not found in scope.
 */
 
 /* Basic Example */
