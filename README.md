@@ -93,6 +93,33 @@ Reference Types :
 
 Primitive type stored in call stack(EC) and reference type are stored in heap.
 
+```
+let lastName = 'Williams'
+let oldLastName = lastName
+lastName = 'Davis'
+console.log(lastName, oldLastName) // Davis Williams
+
+const jessica = {
+    firstName : 'Jessica',
+    lastName : 'Williams',
+    age : 27
+}
+
+// Problem
+const marriedJessica = jessica
+marriedJessica.lastName = 'Davis'
+
+console.log("before marriage", jessica); // Jessica Devis
+console.log("after marriage", marriedJessica); // Jessica Devis
+
+// Shallow Copy [this will fail if object has array and we're updating the array]
+const marriedJessicaCopy = Object.assign({}, jessica)
+marriedJessicaCopy.lastName = 'Davis'
+
+console.log("before marriage", jessica); // Jessica Williams
+console.log("after marriage", marriedJessica); // Jessica Devis
+```
+
 ### Conditional
 
 > 1.  if else <br/>
