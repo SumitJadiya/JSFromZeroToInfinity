@@ -141,17 +141,43 @@ console.log("after marriage", marriedJessica); // Jessica Devis
   More on <a href="https://github.com/SumitJadiya/JSTube/blob/master/09DSUsingJS/script.js#L42">Destructuring</a>
 
 - Spread :
+  when we have (...) operator in right side of = sign
+  More on <a href="./06LittleAdvanced/05spread.js">SPREAD Operator</a>
 
 - Rest :
+  when we have (...) operator in left side of = sign
+  More on <a href="https://github.com/SumitJadiya/JSFromZeroToInfinity/blob/master/06LittleAdvanced/05spread.js#L44">REST Operator</a>
+
+- Short Circuiting :
+  && and || operator are known as short circuiting
+
+- Coercion (truthy and falsy values) : <br/>
+  Falsy Values : 0, undefined, NAN, null, '' <br/>
+  other values are known as truthy values(returns true if placed inside if block).
+
+- Nullish Coalescing Operator (??) :
+  Works with the idea of nullish values instead of falsy values. Nullish values are null and undefined.
+
+  ```
+  let a;
+  const result = a ?? 10; // a is nullish value
+  console.log(result) // 10 (returns first not null value)
+  ```
+
+- Loops :
+  <a href="./03Intermediate/12loops.js"> For/while/do while </a>
+  <a href="./03Intermediate/13loopsPartTwo.js"> ForEach (not exactly loop but method for array) </a>
+  <a href="./03Intermediate/14loopsPartThree.js"> For of / in </a>
+
+- Option Chaining (?.)
+  Instead of checking for null values explicitly, we can use option chaining to check the value and returns undefined immediately.
+
+  ```
+    console.log(a?.name)
+    // returns undefined as a is not defined. Without "?.", JS will throw "Uncaught TypeError: Cannot read property 'name' of undefined"
+  ```
 
 ---
-
-### Conditional
-
-1.  if else <br/>
-2.  && and || operator with if else<br/>
-3.  Ternary Operator<br/>
-4.  Coercion (truthy and falsy values) - Apart from undefined, NaN, null, 0, '' all are truthy value(returns true if placed inside if block).
 
 ### functions
 
@@ -169,13 +195,6 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 1.  Basics<br/>
 2.  Function inside Object
 3.  New Keyword
-
-### Loops
-
-1.  Basic for loop<br/>
-2.  while and do while<br/>
-3.  For Each loop (not exactly loop but method for array)<br/>
-4.  For of and For in
 
 ### DOM
 
