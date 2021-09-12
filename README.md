@@ -142,6 +142,8 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 
 - Spread :
 
+- Rest :
+
 ---
 
 ### Conditional
