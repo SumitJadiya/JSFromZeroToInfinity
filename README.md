@@ -12,12 +12,16 @@
 - Single Threaded
 - Non blocking event loop
 
+---
+
 ### Javascript Engine :
 
 - Parsing [code is parsed into AST - Abstract Syntax Tree]
 - Compilation [takes parsed code (AST) and compiles it to Machine Code]
 - Execution [execution happens in call stack]
 - Optimization [never ending process loop. takes current unoptimized code and returns optimized code to compiler]
+
+---
 
 ### Javascript Runtime :
 
@@ -26,6 +30,8 @@ Runtime in the browser has :
 - Engine [Heap, Call Stack]
 - WEB APIs [DOM, Timers, Fetch API, . . . ]
 - Callback Queue [onclick, timer, . . . ]
+
+---
 
 ### Execution Context :
 
@@ -40,6 +46,8 @@ Inside Execution Context :
 - Variable Environment [let, const and var declaration, Functions, arguments object]
 - <a href="./03Intermediate/05scopeChain.js"> Scope Chain </a> <br/>
 - <a href="./03Intermediate/06thisKeyword.js"> This Keyword </a><br/>
+
+---
 
 ### Hoisting :
 
@@ -56,6 +64,8 @@ TDZ makes it easier to avoid and catch errors.
 
 More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
+---
+
 ### This Keyword :
 
 Special variable that is created for every execution context (every function). Takes the value of (points to) the "owner" of the function in which the "this" keyword is used.
@@ -71,6 +81,8 @@ More details :
 
 Regular Function vs Arrow Function :
 Regular fn has its own this keyword whereas arrow function inherits this keyword from parent scope.
+
+---
 
 ### Primitives vs Objects (Reference)
 
@@ -120,6 +132,8 @@ console.log("before marriage", jessica); // Jessica Williams
 console.log("after marriage", marriedJessica); // Jessica Devis
 ```
 
+---
+
 ### Mordern Operators
 
 - Destructuring :
@@ -128,88 +142,90 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 
 - Spread :
 
+---
+
 ### Conditional
 
-> 1.  if else <br/>
-> 2.  && and || operator with if else<br/>
-> 3.  Ternary Operator<br/>
-> 4.  Coercion (truthy and falsy values) - Apart from undefined, NaN, null, 0, '' all are truthy value(returns true if placed inside if block).
+1.  if else <br/>
+2.  && and || operator with if else<br/>
+3.  Ternary Operator<br/>
+4.  Coercion (truthy and falsy values) - Apart from undefined, NaN, null, 0, '' all are truthy value(returns true if placed inside if block).
 
 ### functions
 
-> 1.  Calling and referencing<br/>
-> 2.  Functions in variable<br/>
-> 3.  Context<br/>
+1.  Calling and referencing<br/>
+2.  Functions in variable<br/>
+3.  Context<br/>
 
 ### Array
 
-> 1.  Basics<br/>
-> 2.  Filter
+1.  Basics<br/>
+2.  Filter
 
 ### Object
 
-> 1.  Basics<br/>
-> 2.  Function inside Object
-> 3.  New Keyword
+1.  Basics<br/>
+2.  Function inside Object
+3.  New Keyword
 
 ### Loops
 
-> 1.  Basic for loop<br/>
-> 2.  while and do while<br/>
-> 3.  For Each loop (not exactly loop but method for array)<br/>
-> 4.  For of and For in
+1.  Basic for loop<br/>
+2.  while and do while<br/>
+3.  For Each loop (not exactly loop but method for array)<br/>
+4.  For of and For in
 
 ### DOM
 
-> 1.  DOM Manipulation using getElement and querySelector<br/>
-> 2.  Counter App <br/>
-> 3.  Color code seletor App
+1.  DOM Manipulation using getElement and querySelector<br/>
+2.  Counter App <br/>
+3.  Color code seletor App
 
 ### Intermediate Level
 
-> 1.  Proto <br/>
-> 2.  Object Chain <br/>
-> 3.  Self Executing Anonymous function --> IIFE <br/>
-> 4.  Lexical Scoping <br/>
-> 5.  Closure <br/>
-> 6.  Curring [--> name()()()] <br/>
-> 7.  Binding (or bind) <br/>
-> 8.  Price Sorting Project <br/>
-> 9.  Scope <br/>
-> 10. Strings <br/>
-> 11. Maps <br/>
-> 12. Destructure <br/>
-> 13. Spread and REST <br/>
-> 14. Class and Objects<br/>
-> 15. Inheritance <br/>
-> 16. Event - Promise, Async, Await <br/>
-> 17. API Handling
+1.  Proto <br/>
+2.  Object Chain <br/>
+3.  Self Executing Anonymous function --IIFE <br/>
+4.  Lexical Scoping <br/>
+5.  Closure <br/>
+6.  Curring [name()()()] <br/>
+7.  Binding (or bind) <br/>
+8.  Price Sorting Project <br/>
+9.  Scope <br/>
+10. Strings <br/>
+11. Maps <br/>
+12. Destructure <br/>
+13. Spread and REST <br/>
+14. Class and Objects<br/>
+15. Inheritance <br/>
+16. Event - Promise, Async, Await <br/>
+17. API Handling
 
 ### Javascript projects
 
-> 1.  Color Flipper <br/>
-> 2.  Counter <br/>
-> 3.  Review System <br />
-> 4.  Navbar <br/>
-> 5.  Sidebar <br/>
-> 6.  Modal <br/>
-> 7.  QnA section <br/>
-> 8.  Menu Project <br/>
-> 9.  Control Video <br/>
-> 10. Scroll Project <br/>
-> 11. Tabs <br/>
-> 12. Countdown Timer <br/>
-> 13. Lorem Ipsum Generator <br/>
-> 14. Todo List <br/>
-> 15. Slider <br/>
-> 16. Slider-2 <br/>
-> 17. Stripe submenus <br/>
+1.  Color Flipper <br/>
+2.  Counter <br/>
+3.  Review System <br />
+4.  Navbar <br/>
+5.  Sidebar <br/>
+6.  Modal <br/>
+7.  QnA section <br/>
+8.  Menu Project <br/>
+9.  Control Video <br/>
+10. Scroll Project <br/>
+11. Tabs <br/>
+12. Countdown Timer <br/>
+13. Lorem Ipsum Generator <br/>
+14. Todo List <br/>
+15. Slider <br/>
+16. Slider-2 <br/>
+17. Stripe submenus <br/>
 
 ### Guess Number Project
 
 Random number generated by system, goal is to predict the number <br />
 
-> <img src="99OtherProjects/images/07Project_guessMyNumber_before.png"> 
-> <br/>
-> <br/>
-> <img src="99OtherProjects/images/07Project_guessMyNumber_after.png">
+<img src="99OtherProjects/images/07Project_guessMyNumber_before.png"> 
+<br/>
+<br/>
+<img src="99OtherProjects/images/07Project_guessMyNumber_after.png">
