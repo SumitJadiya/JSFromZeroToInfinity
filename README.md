@@ -189,9 +189,21 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 - Maps :
   Read more on <a href="06LittleAdvanced/03maps.js">map</a>
 
+- Strings :
+  Read more on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">Strings</a>
+
 ---
 
 ### functions
+
+- Default Parameters :
+
+  ```
+  const sum = (a,b=20,c=10) => {
+    return a+b+c; // 60
+  }
+  sum (30, undefined) // either leave empty or set to undefined to use default parameter
+  ```
 
 1.  Calling and referencing<br/>
 2.  Functions in variable<br/>
@@ -225,14 +237,10 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 7.  Binding (or bind) <br/>
 8.  Price Sorting Project <br/>
 9.  Scope <br/>
-10. Strings <br/>
-11. Maps <br/>
-12. Destructure <br/>
-13. Spread and REST <br/>
-14. Class and Objects<br/>
-15. Inheritance <br/>
-16. Event - Promise, Async, Await <br/>
-17. API Handling
+10. Class and Objects<br/>
+11. Inheritance <br/>
+12. Event - Promise, Async, Await <br/>
+13. API Handling
 
 ### Javascript projects
 
