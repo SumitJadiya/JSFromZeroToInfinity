@@ -1,3 +1,7 @@
+//////////////////////
+// MAPS
+//////////////////////
+
 var myMap = new Map()
 
 myMap.set(1, "Uno")
@@ -29,3 +33,29 @@ for (let [key, value] of myMap) {
 
 // print values
 myMap.forEach((value) => console.log(`${value}`))
+
+// without set method
+const questions = new Map([
+    ['question', 'what is the best programming language?'],
+    [1, 'C'],
+    [2, 'Java'],
+    [3, 'JS'],
+    ['correct', 3],
+    [true, 'Correct 🎉'],
+    [false, 'Try Again!']
+])
+console.log(questions)
+
+for (const [key, value] of questions) {
+    if (typeof key === 'number')
+        console.log(`Answer ${key} : ${value}`)
+}
+
+const answer = 3
+console.log(questions.get(questions.get('correct') === answer))
+
+// convert map to array
+console.log([...questions])
+console.log(questions.entries())
+console.log(...questions.keys())
+console.log(...questions.values())

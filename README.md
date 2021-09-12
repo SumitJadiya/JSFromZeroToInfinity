@@ -134,7 +134,7 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 
 ---
 
-### Mordern Operators
+### Modern Operators
 
 - Destructuring :
   way of extracting multiple values from data stored in (possibly nested) objects and Arrays.
@@ -165,17 +165,29 @@ console.log("after marriage", marriedJessica); // Jessica Devis
   ```
 
 - Loops :
-  <a href="./03Intermediate/12loops.js"> For/while/do while </a>
-  <a href="./03Intermediate/13loopsPartTwo.js"> ForEach (not exactly loop but method for array) </a>
-  <a href="./03Intermediate/14loopsPartThree.js"> For of / in </a>
+  <a href="./03Intermediate/12loops.js"> For/while/do while </a> <br/>
+  <a href="./03Intermediate/13loopsPartTwo.js"> ForEach (not exactly loop but method for array) </a> <br/>
+  <a href="./03Intermediate/14loopsPartThree.js"> For of / in </a> <br/>
 
-- Option Chaining (?.)
+- Option Chaining (?.) :
   Instead of checking for null values explicitly, we can use option chaining to check the value and returns undefined immediately.
 
   ```
     console.log(a?.name)
     // returns undefined as a is not defined. Without "?.", JS will throw "Uncaught TypeError: Cannot read property 'name' of undefined"
   ```
+
+- Sets :
+  doesn't maintain order, doesn't allow duplicates
+
+  ```
+  const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+  const staffUnique = [...new Set(staff)];
+  console.log(staffUnique); // returns unique items
+  ```
+
+- Maps :
+  Read more on <a href="06LittleAdvanced/03maps.js">map</a>
 
 ---
 

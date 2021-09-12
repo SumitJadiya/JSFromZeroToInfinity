@@ -20,3 +20,15 @@ const symbols = {
 for (const symbol in symbols) {
     console.log(`Key ${symbol} and value ${symbols[symbol]}`)
 }
+
+////////////////////
+// Optional Chaining
+////////////////////
+
+const users = [{
+    name: 'Sumit',
+    email: 'xyz@gmail.com'
+}]
+
+// with nullish coalesc operator
+console.log(users[0].name ?? 'users array empty')
