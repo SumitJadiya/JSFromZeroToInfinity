@@ -120,6 +120,14 @@ console.log("before marriage", jessica); // Jessica Williams
 console.log("after marriage", marriedJessica); // Jessica Devis
 ```
 
+### Mordern Operators
+
+- Destructuring :
+  way of extracting multiple values from data stored in (possibly nested) objects and Arrays.
+  More on <a href="https://github.com/SumitJadiya/JSTube/blob/master/09DSUsingJS/script.js#L42">Destructuring</a>
+
+- Spread :
+
 ### Conditional
 
 > 1.  if else <br/>
