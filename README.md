@@ -302,7 +302,9 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 
     //calling the bound function later
     console.log(bound("Donuts","Chips","Cake")); // Tom likes to eat Pasta Donuts and Chips
+    ```
 
+    ```
     Ex. 2 :
 
     //without bind (closures)
@@ -337,7 +339,9 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 - Closures :
 
   - when function returning another function, the holding function will hold its environment ( basically all the variable it needed)
-  - function along with lexical scope forms closure
+  - variable environment attached to the function, exactly as it was at the time and place the function was created
+  - closure gives a fn access to all the variables of its parent function, even after that parent fn has returned. The function keeps reference to its outer space, which preserves the scope chain throughout time.
+  - closure makes sure that a function does not lose the connection to a variables that existed at the time of function's birth.
 
   Closures used in :
 
@@ -347,7 +351,7 @@ console.log("after marriage", marriedJessica); // Jessica Devis
   - memoize
   - maintaining state in async world
   - setTimeouts
-  - Iterators
+  - Iterators ... etc
 
   ```
   function secureBooking() {
@@ -363,6 +367,8 @@ console.log("after marriage", marriedJessica); // Jessica Devis
   booker() // 2
   booker() // 3
   ```
+
+---
 
 ### Array
 
