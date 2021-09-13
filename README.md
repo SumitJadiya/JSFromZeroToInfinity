@@ -205,9 +205,164 @@ console.log("after marriage", marriedJessica); // Jessica Devis
   sum (30, undefined) // either leave empty or set to undefined to use default parameter
   ```
 
-1.  Calling and referencing<br/>
-2.  Functions in variable<br/>
-3.  Context<br/>
+- Passing by value and passing by reference :
+  JS doesn't have pass by reference (exception - passing object as parameter)
+
+- First Class Functions :
+
+  - JS treats functions as first-class citizen
+  - It treats functions as simple values
+  - functions are just another type of object
+
+  ```
+  // Store functions in variable
+  const add = (a,b) => a+b;
+
+  // pass function as arguments to other function
+  const greet = () => console.log("Hey!");
+  btn.addEventListener('click', greet);
+  ```
+
+  First class function is a concept in JS.
+
+- Higher order functions :
+  A function that receives another function as arguement, that returns a new function, or both. This is only possible bcz of first-class functions.
+
+  ```
+  // function that receive another function
+  const greet = () => console.log("Hey!");
+  btn.addEventListener('click', greet); // addEventListener is a higher order function
+
+  // function that return another function
+  function count(){
+    let counter = 0;
+    return function() {
+      counter++;
+    }
+  }
+  ```
+
+  Higher order functions can be implemented using callbacks.
+
+- Function returning Functions :
+
+  ```
+  const greet = function(greeting) {
+    return function(name) {
+      console.log(`${greeting}${name}`)
+    }
+  }
+
+  const greetfn = greet('hey') // it will contain the function returned by greet
+  greetfn("Sumit")
+
+  or
+  greet('Hello')('Sumit') //  this is same as previous calling
+  ```
+
+- Function Borrowing (call / apply / bind) :
+
+  - Call :
+    The call method allows for a method that was defined for one object to be assigned and called on by another object. This allows for a method to get defined once and then get inherited by other objects without having to re-write it for other objects.
+  - Apply :
+    Apply serves the exact same purpose as call. The only difference between the two is that call expects all parameters to be passed individually, whereas apply expects the second argument to be an array of all the parameters.
+
+    ```
+    var animal = {
+      animalInfo: function(sound,food) {
+        return this.name + " is " + this.age + " years old" + " . He makes the sound "+ sound + " and eats " + food
+      }
+    }
+
+    var cat = {
+      name : "Tom",
+      age : 5
+    }
+
+    console.log(animal.animalInfo.call(cat,"meow", "fish")) // call
+    console.log(animal.animalInfo.apply(cat,["meow", "fish"])) // apply
+    ```
+
+  - Bind (for partial function) :
+    The bind function creates a new function whose this value can be set to the value provided during the function call, enabling the calling of a function with a specified this value (the first parameter to bind function)
+
+    ```
+    Ex. 1 :
+
+    var obj = {
+      name:"Tom"
+    };
+
+    var info = function(a,b,c){
+      return this.name + " likes to eat " + a + " " + b + " and " +c;
+    };
+
+    //creates a bound function that has same body and parameters
+    var bound = info.bind(obj,"Pasta");
+
+    //calling the bound function later
+    console.log(bound("Donuts","Chips","Cake")); // Tom likes to eat Pasta Donuts and Chips
+
+    Ex. 2 :
+
+    //without bind (closures)
+    const addTaxRate = rate => {
+      return function (value) {
+        return value + value * rate;
+      }
+    }
+
+    const addVat = addTaxRate(0.23)
+    console.log(addVat(40))
+
+    // with bind
+    const addTax = (rate, value) => value + value * rate;
+
+    // fix tax rate
+    const vatTax = addTax.bind(null, 0.23)
+    console.log(vatTax(100))
+    console.log(vatTax(40))
+    ```
+
+- IIFE : Pattern that is used to declare functions which are required for one time use only.
+
+  ```
+  // Self Executing Anonymous function --> IIFE
+  (function sayHello() {
+    const isPrivate = 23; // encapsulated data
+    console.log("I will never run again")
+  })()
+  ```
+
+- Closures :
+
+  - when function returning another function, the holding function will hold its environment ( basically all the variable it needed)
+  - function along with lexical scope forms closure
+
+  Closures used in :
+
+  - Module design pattern
+  - Currying
+  - Function like once
+  - memoize
+  - maintaining state in async world
+  - setTimeouts
+  - Iterators
+
+  ```
+  function secureBooking() {
+      var passengerCount = 0
+      return function () {
+          passengerCount++;
+          console.log(passengerCount) // fetch the value from lexical scope
+      }
+  }
+
+  const booker = secureBooking()
+  booker() // 1
+  booker() // 2
+  booker() // 3
+  ```
 
 ### Array
 
