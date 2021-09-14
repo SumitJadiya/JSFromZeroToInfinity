@@ -20,3 +20,15 @@ users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"]
 
 users.splice(1, 3, "Hi", "Bye")
 console.log(users) // [ 'Ted', 'Hi', 'Bye', 'Sor', 'Sod' ]
+
+// Reverse 
+arr = ['a', 'b', 'c', 'd', 'e']
+console.log(arr.reverse()) // reversed
+
+// concat
+const letters = arr.concat(users);
+console.log(letters)
+console.log([...arr, ...users]) //this is same as concat
+
+// join
+console.log(letters.join('-'))

@@ -372,8 +372,8 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 
 ### Array
 
-1.  Basics<br/>
-2.  Filter
+- Simple Array Methods :
+  - <a href="03Intermediate/09filterArray.js"> Slice, Splice, Filter, Reverse, Concat, Join </a>
 
 ### Object
 
