@@ -373,7 +373,46 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 ### Array
 
 - Simple Array Methods :
+
   - <a href="03Intermediate/09filterArray.js"> Slice, Splice, Filter, Reverse, Concat, Join </a>
+
+- Data Transformation with MAP, FILTER, REDUCE :
+
+  - MAP :
+    MAP returns a new array containing the results of applying an operation on all original array elements.
+
+    ```
+    let arr = [1,2,3,4]
+
+    arr.map(val => val*2;) // returns a new array
+    ```
+
+    ForEach vs Map : map creates new array whereas foreach uses the same array.
+
+  - FILTER :
+    FILTER returns a new array containing the array elements that passed a specified test condition
+
+    ```
+    let arr = [1,2,3,4]
+
+    arr.filter(num => num%2==0) // returns a new array
+    ```
+
+  - REDUCE :
+    this reduces all elements down to one single value (eg. adding all values)
+
+    ```
+    Syntax :
+    arr.reduce (function (accumulator, currentValue, index, array){}, startValue)
+    ```
+
+    ```
+    let arr = [1,2,3,4]
+    const sum = arr.reduce((total, curr) => total+curr , 0)
+
+    ```
+
+---
 
 ### Object
 

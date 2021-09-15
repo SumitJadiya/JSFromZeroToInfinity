@@ -81,6 +81,31 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements)
 
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0)
+  labelBalance.textContent = `${balance} INR`;
+}
+calcDisplayBalance(account1.movements)
+
+const calcDisplaySummary = (movements) => {
+  const incomes = movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0)
+  labelSumIn.textContent = `${incomes} INR`;
+  const expense = movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0)
+  labelSumOut.textContent = `${Math.abs(expense)} INR`;
+  const interest = movements.filter(mov => mov > 0).map(amt => amt * 0.012).filter(int => int >= 1).reduce((acc, mov) => acc + mov, 0)
+  labelSumInterest.textContent = `${interest} INR`;
+}
+
+calcDisplaySummary(account1.movements)
+
+const createUserNames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner.toLowerCase().split(' ').map(n => n[0]).join('');
+  })
+}
+
+createUserNames(accounts)
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
