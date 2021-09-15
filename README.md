@@ -412,6 +412,69 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 
     ```
 
+  - FIND :
+    The find() method returns the value of the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+
+    ```
+    Syntax:
+    find((element) => { ... } )
+    ```
+
+    If you need the index of the found element in the array, use findIndex()
+
+  - Which Array method to use ?
+    <table>
+    <tr>
+      <td>To Mutate Original Array</td>
+      <td>
+      Add to original : .push(end), .unshift(start) <br/>
+      Remove from original : .pop(end), .shift(start), .splice(any)<br/>
+      Others : .reverse, .sort, .fill
+      </td>
+    </tr>
+    <tr>
+      <td>To get a new Array</td>
+      <td>
+      Computed from original :
+      .map(loop) <br/>
+      Filtered using condition : .filter <br/>
+      portion of original : .slice <br/>
+      adding original to other : concat <br/>
+      flattening of original : .flat, .flatMap
+      </td>
+    </tr>
+    <tr>
+      <td>To get an array index</td>
+      <td>
+      Based on value : .indexOf<br/>
+      Based on test condition : .findIndex<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>to get an array element</td>
+      <td>based on test condition : .find</td>
+    </tr>
+    <tr>
+      <td>to know if array includes a number</td>
+      <td>
+      based on value : .includes <br/>
+      based on test condition : .some, .every
+      </td>
+    </tr>
+    <tr>
+      <td>to get a new String</td>
+      <td>based on separator string : .join</td>
+    </tr>
+    <tr>
+      <td>to transform value</td>
+      <td>based on accumulator : .reduce</td>
+    </tr>
+    <tr>
+      <td>to loop an array</td>
+      <td>based on callback : .forEach</td>
+    </tr>
+    </table>
+
 ---
 
 ### Object
