@@ -477,11 +477,59 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 
 ---
 
-### Object
+### Numbers, Timer
 
-1.  Basics<br/>
-2.  Function inside Object
-3.  New Keyword
+- Converting and Checking Numbers
+
+  ```
+  console.log(23 === 23.0); // true
+  // Base 10 - 0 to 9. 1/10 = 0.1. 3/10 = 3.3333333
+  // Binary base 2 - 0 1
+  console.log(0.1 + 0.2); // 0.30000000000000004
+  console.log(0.1 + 0.2 === 0.3); // false
+  ```
+
+  ```
+  // Conversion
+  console.log(Number('23')); // 23
+  console.log(+'23'); // 23
+  ```
+
+  ```
+  // Parsing
+  console.log(Number.parseInt('30px', 10)); // 30
+  console.log(Number.parseInt('e23', 10)); // NaN
+  console.log(Number.parseInt(' 2.5rem ')); // 2
+  console.log(Number.parseFloat(' 2.5rem ')); // 2.5
+  ```
+
+- Timer
+
+  - SetTimeout : This runs a method after specific time interval.
+
+    ```
+    const ingredients = ['olives', 'spinach'];
+    const pizzaTimer = setTimeout(
+      (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2} 🍕`),
+      3000,
+      ...ingredients
+    );
+
+    console.log('Waiting...'); // this will run before setTimeout
+
+    if (ingredients.includes('spinach')) clearTimeout(pizzaTimer); // to clear timeout
+    ```
+
+- SetInterval : This runs any method forever repeatedly after some time interval.
+
+  ```
+  const timer = setInterval(function () {
+    const now = new Date();
+    console.log(now);
+  }, 1000);
+
+  clearInterval(timer)
+  ```
 
 ### DOM
 
