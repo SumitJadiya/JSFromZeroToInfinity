@@ -520,16 +520,16 @@ console.log("after marriage", marriedJessica); // Jessica Devis
     if (ingredients.includes('spinach')) clearTimeout(pizzaTimer); // to clear timeout
     ```
 
-- SetInterval : This runs any method forever repeatedly after some time interval.
+  - SetInterval : This runs any method forever repeatedly after some time interval.
 
-  ```
-  const timer = setInterval(function () {
-    const now = new Date();
-    console.log(now);
-  }, 1000);
+    ```
+    const timer = setInterval(function () {
+      const now = new Date();
+      console.log(now);
+    }, 1000);
 
-  clearInterval(timer)
-  ```
+    clearInterval(timer)
+    ```
 
 ### DOM
 
