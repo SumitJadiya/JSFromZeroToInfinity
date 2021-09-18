@@ -34,3 +34,24 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+// Smooth Scrolling
+const btnScrollTo = document.querySelector('.btn--scroll-to')
+const section1 = document.querySelector('#section--1')
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1Coords = section1.getBoundingClientRect()
+  console.log(s1Coords)
+  // old
+  // window.scrollTo(s1Coords.left + window.pageXOffset, s1Coords.top + window.pageYOffset)
+
+  // new 
+  // window.scrollTo({
+  //   left: s1Coords.left + window.pageXOffset,
+  //   top: s1Coords.top + window.pageYOffset,
+  //   behavior: 'smooth'
+  // })
+
+  // latest
+  section1.scrollIntoView({ behavior: 'smooth' })
+})

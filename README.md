@@ -562,6 +562,74 @@ console.log("after marriage", marriedJessica); // Jessica Devis
     })
     ```
 
+- Events :
+
+  - Bubbling :
+    In event bubbling, the handler first executes on the event attached to the target element, then on all its ancestors. It starts from the bottom (deepest layer) and goes to the top.
+
+    ```
+    // HTML
+    <html>
+    <head>
+    </head>
+    <body>
+      <h1> Event Bubbling Example</h1>
+      <div id="Box">
+        <button id="myButton">Click Me!</button>
+      </div>
+    </body>
+    </html>
+
+    // JS
+    var parent = document.getElementById("Box");
+    parent.addEventListener("click", function() {
+      console.log("Box is clicked");
+    });
+    var child = document.getElementById("myButton");
+    child.addEventListener("click", function() {
+      console.log("Button is clicked");
+    });
+
+    // OUTPUT
+    Button is clicked
+    Box is clicked
+    ```
+
+  - Capturing :
+    In event capturing, when you click the button, the event passes from the parent down to the event target, the button (assigned to child).
+
+    ```
+    // HTML
+    <html>
+    <head>
+    </head>
+    <body>
+      <h1> Event Bubbling Example</h1>
+      <div id="Box">
+        <button id="myButton">Click Me!</button>
+      </div>
+    </body>
+    </html>
+
+    // JS
+    var parent = document.getElementById("Box");
+    parent.addEventListener(
+      "click",
+      function() {
+        console.log("Box is clicked");
+      },
+      true
+    );
+    var child = document.getElementById("myButton");
+    child.addEventListener("click", function() {
+      console.log("Button is clicked");
+    });
+
+    // OUTPUT
+    Box is clicked
+    Button is clicked
+    ```
+
 1.  DOM Manipulation using getElement and querySelector<br/>
 2.  Counter App <br/>
 3.  Color code seletor App
