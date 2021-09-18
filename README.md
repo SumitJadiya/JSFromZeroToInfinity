@@ -1,4 +1,4 @@
-# JSTube
+# JS Notes
 
 ### Javascript Overview :
 
@@ -25,42 +25,42 @@
 
 ### Javascript Runtime :
 
-Runtime in the browser has :
+- Runtime in the browser has :
 
-- Engine [Heap, Call Stack]
-- WEB APIs [DOM, Timers, Fetch API, . . . ]
-- Callback Queue [onclick, timer, . . . ]
+  - Engine [Heap, Call Stack]
+  - WEB APIs [DOM, Timers, Fetch API, . . . ]
+  - Callback Queue [onclick, timer, . . . ]
 
 ---
 
 ### Execution Context :
 
-Environment in which a piece of JS is executed. Stores all the necessary information for some code to be executed.
+- Environment in which a piece of JS is executed. Stores all the necessary information for some code to be executed.
 
-- Global Execution context (i.e. top level) is created for code that is not inside any function.
-- One execution context is created for each function call.
-- Execution of functions (which are called) and waiting for callbacks (events)
+  - Global Execution context (i.e. top level) is created for code that is not inside any function.
+  - One execution context is created for each function call.
+  - Execution of functions (which are called) and waiting for callbacks (events)
 
-Inside Execution Context :
+- Inside Execution Context :
 
-- Variable Environment [let, const and var declaration, Functions, arguments object]
-- <a href="./03Intermediate/05scopeChain.js"> Scope Chain </a> <br/>
-- <a href="./03Intermediate/06thisKeyword.js"> This Keyword </a><br/>
+  - Variable Environment [let, const and var declaration, Functions, arguments object]
+  - <a href="./03Intermediate/05scopeChain.js"> Scope Chain </a> <br/>
+  - <a href="./03Intermediate/06thisKeyword.js"> This Keyword </a><br/>
 
 ---
 
 ### Hoisting :
 
-Makes some variables accessible/usable in the code even before they actually declared.
+- Makes some variables accessible/usable in the code even before they actually declared.
 
-Function declaration : Yes [value -> actual function]
-var variables : Yes [value -> undefined]
-let and const variables : No [technically, yes. But the value is <uninitialized> as they are placed in Temporal Dead Zone]
-function expressions and arrow functions : [depends if they uses var or let/const]
+  - Function declaration : Yes [value -> actual function]
+  - var variables : Yes [value -> undefined]
+  - let and const variables : No [technically, yes. But the value is <uninitialized> as they are placed in Temporal Dead Zone]
+  - function expressions and arrow functions : [depends if they uses var or let/const]
 
-Temporal Dead Zone :
-All the let/const variable get their own TDZ until the line where it is defined. The variable is only safe to use after TDZ.
-TDZ makes it easier to avoid and catch errors.
+- Temporal Dead Zone :
+  All the let/const variable get their own TDZ until the line where it is defined. The variable is only safe to use after TDZ.
+  TDZ makes it easier to avoid and catch errors.
 
 More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
@@ -68,19 +68,20 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
 ### This Keyword :
 
-Special variable that is created for every execution context (every function). Takes the value of (points to) the "owner" of the function in which the "this" keyword is used.
+- Special variable that is created for every execution context (every function). Takes the value of (points to) the "owner" of the function in which the "this" keyword is used.
 
-Method : this = <Object that is calling the method>
-Simple function call : this = undefined
-Arrow function : this = <this of surrounding function (lexical this)>
-Event Listener : this = <DOM element that the handler is attached to>
+  - Method : this = <Object that is calling the method>
+  - Simple fn call : this = undefined
+  - Arrow fn : this = <this of surrounding function (lexical this)>
+  - EventListener : this = <DOM element that the handler is attached to>
 
-More details :
-<a href="./03Intermediate/06thisKeyword.js">This keyword basics </a>
-<a href="./03Intermediate/15thisAgain.js">This keyword example</a>
+- More details :
 
-Regular Function vs Arrow Function :
-Regular fn has its own this keyword whereas arrow function inherits this keyword from parent scope.
+  - <a href="./03Intermediate/06thisKeyword.js">This keyword basics </a>
+  - <a href="./03Intermediate/15thisAgain.js">This keyword example</a>
+
+- Regular Function vs Arrow Function :
+  - Regular fn has its own this keyword whereas arrow function inherits this keyword from parent scope.
 
 ---
 
