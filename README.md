@@ -70,10 +70,10 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
 - Special variable that is created for every execution context (every function). Takes the value of (points to) the "owner" of the function in which the "this" keyword is used.
 
-  - Method : this = <Object that is calling the method>
+  - Method : this = Object that is calling the method
   - Simple fn call : this = undefined
-  - Arrow fn : this = <this of surrounding function (lexical this)>
-  - EventListener : this = <DOM element that the handler is attached to>
+  - Arrow fn : this = this of surrounding function (lexical this)
+  - EventListener : this = DOM element that the handler is attached to
 
 - More details :
 
