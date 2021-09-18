@@ -533,6 +533,35 @@ console.log("after marriage", marriedJessica); // Jessica Devis
 
 ### DOM
 
+- Selecting, Creating, Deleting Element :
+
+  - Selection : document.getElementsBy<XYZ>, document.querySelector()
+
+    ```
+    const allSections = document.querySelectorAll('.section')
+    ```
+
+  - Insertion : document.createElement()
+
+    ```
+    const message = document.createElement('div')
+    message.classList.add('cookie-message');
+    message.textContent = 'text' // simple text
+    message.innerHTML = `html content <button class='btn'>here!</button>`
+    header.append(message) // append the message at last
+    ```
+
+  - Deletion : remove(), removeChild()
+
+    ```
+    document
+    .querySelector('.btn--close-cookie)
+    .addEventListener('click', function() {
+      message.remove() // recent addition to JS
+      message.parentElement.removeChild(message) // similar to previous line
+    })
+    ```
+
 1.  DOM Manipulation using getElement and querySelector<br/>
 2.  Counter App <br/>
 3.  Color code seletor App
