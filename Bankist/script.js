@@ -35,7 +35,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// Smooth Scrolling
+// Button Smooth Scrolling
 const btnScrollTo = document.querySelector('.btn--scroll-to')
 const section1 = document.querySelector('#section--1')
 
@@ -54,4 +54,38 @@ btnScrollTo.addEventListener('click', function (e) {
 
   // latest
   section1.scrollIntoView({ behavior: 'smooth' })
+})
+
+// funtion to handle scrolling
+// Basic Way using Event Bubbling [same function called 'n' times]
+/*
+const handleScrolling = (e) => {
+  e.preventDefault();
+  const id = e.currentTarget.getAttribute('href')
+  document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+}
+
+// Page Navigation
+document.querySelectorAll('.nav__link').forEach(function (el) {
+  el.addEventListener('click', handleScrolling)
+})
+*/
+
+// Using Event Delegation
+// 1. Add Event Listener to common parent element
+// 2. Determine what element originated the event
+const handleScrolling = (e) => {
+  e.preventDefault();
+  const id = e.target.getAttribute('href')
+  document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+}
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault()
+  console.log(e.target)
+
+  // pattern matching
+  if (e.target.classList.contains('nav__link')) {
+    handleScrolling(e)
+  }
 })

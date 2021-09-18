@@ -353,9 +353,8 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   - memoize
   - maintaining state in async world
   - setTimeouts
-  - Iterators etc. <br/>
-  
-  
+  - Iterators etc.
+
     ```
     function secureBooking() {
         var passengerCount = 0
@@ -633,9 +632,22 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
     Button is clicked
     ```
 
-1.  DOM Manipulation using getElement and querySelector<br/>
-2.  Counter App <br/>
-3.  Color code seletor App
+  - <a href="./Bankist/script.js#L77">Event Delegation</a> :
+    Event Delegation is basically a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the . target property of the event object.
+
+  - Note :
+
+    - e.currentTarget and this variable are same for normal methods but different for arrow fns
+
+      ```
+      const handleScrolling = (e) => {
+        e.preventDefault();
+        const id = e.currentTarget.getAttribute('href')
+        // this won't work as this points to window object
+        // const id = this.getAttribute('href')
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+      }
+      ```
 
 ### Intermediate Level
 
