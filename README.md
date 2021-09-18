@@ -166,9 +166,10 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   ```
 
 - Loops :
-  <a href="./03Intermediate/12loops.js"> For/while/do while </a> <br/>
-  <a href="./03Intermediate/13loopsPartTwo.js"> ForEach (not exactly loop but method for array) </a> <br/>
-  <a href="./03Intermediate/14loopsPartThree.js"> For of / in </a> <br/>
+
+  - <a href="./03Intermediate/12loops.js"> For/while/do while </a> <br/>
+  - <a href="./03Intermediate/13loopsPartTwo.js"> ForEach (not exactly loop but method for array) </a> <br/>
+  - <a href="./03Intermediate/14loopsPartThree.js"> For of / in </a> <br/>
 
 - Option Chaining (?.) :
   Instead of checking for null values explicitly, we can use option chaining to check the value and returns undefined immediately.
@@ -213,7 +214,7 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
   - JS treats functions as first-class citizen
   - It treats functions as simple values
-  - functions are just another type of object
+  - functions are just another type of object <br/>
 
   ```
   // Store functions in variable
@@ -352,7 +353,7 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   - memoize
   - maintaining state in async world
   - setTimeouts
-  - Iterators ... etc
+  - Iterators ... etc <br/>
 
   ```
   function secureBooking() {
