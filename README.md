@@ -216,14 +216,14 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   - It treats functions as simple values
   - functions are just another type of object <br/>
 
-  ```
-  // Store functions in variable
-  const add = (a,b) => a+b;
+    ```
+    // Store functions in variable
+    const add = (a,b) => a+b;
 
-  // pass function as arguments to other function
-  const greet = () => console.log("Hey!");
-  btn.addEventListener('click', greet);
-  ```
+    // pass function as arguments to other function
+    const greet = () => console.log("Hey!");
+    btn.addEventListener('click', greet);
+    ```
 
   First class function is a concept in JS.
 
@@ -353,22 +353,23 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   - memoize
   - maintaining state in async world
   - setTimeouts
-  - Iterators ... etc <br/>
+  - Iterators etc. <br/>
+  
+  
+    ```
+    function secureBooking() {
+        var passengerCount = 0
+        return function () {
+            passengerCount++;
+            console.log(passengerCount) // fetch the value from lexical scope
+        }
+    }
 
-  ```
-  function secureBooking() {
-      var passengerCount = 0
-      return function () {
-          passengerCount++;
-          console.log(passengerCount) // fetch the value from lexical scope
-      }
-  }
-
-  const booker = secureBooking()
-  booker() // 1
-  booker() // 2
-  booker() // 3
-  ```
+    const booker = secureBooking()
+    booker() // 1
+    booker() // 2
+    booker() // 3
+    ```
 
 ---
 
