@@ -14,6 +14,10 @@ const tabsContent = document.querySelectorAll('.operations__content')
 
 const nav = document.querySelector('.nav')
 
+let sections = document.querySelectorAll('.section')
+
+let images = document.querySelectorAll('.features__img')
+
 const openModal = function (e) {
   // stop page modal from jumping
   e.preventDefault();
@@ -213,9 +217,6 @@ headerObserver.observe(header)
 
 //////////////////////
 // Reveal Elements on scroll
-let sections = document.querySelectorAll('.section')
-
-console.log(sections)
 
 const revealSection = function (entries, observer) {
   const [entry] = entries
@@ -235,3 +236,26 @@ sections.forEach(section => {
   sectionObserver.observe(section)
   section.classList.add('section--hidden');
 })
+
+//////////////////////
+// Lazy Loading
+// idea is to remove low resolution image(src) with high resolution image (data-src)
+const imageSection = function (entries, observer) {
+  const [entry] = entries
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.src = entry.target.dataset.src;
+  entry.target.addEventListener('load', function () {
+    entry.target.classList.remove('lazy-img')
+  })
+  observer.unobserve(entry.target)
+}
+
+const imageObserver = new IntersectionObserver(imageSection, {
+  root: null,
+  threshold: 0,
+  rootMargin: '+200px'
+})
+
+images.forEach(image => imageObserver.observe(image))
