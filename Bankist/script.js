@@ -18,6 +18,12 @@ let sections = document.querySelectorAll('.section')
 
 let images = document.querySelectorAll('.features__img')
 
+const slides = document.querySelectorAll('.slide')
+const slider = document.querySelector('.slider')
+const btnLeft = document.querySelector('.slider__btn--left')
+const btnRight = document.querySelector('.slider__btn--right')
+const dotContainer = document.querySelector('.dots')
+
 const openModal = function (e) {
   // stop page modal from jumping
   e.preventDefault();
@@ -255,7 +261,76 @@ const imageSection = function (entries, observer) {
 const imageObserver = new IntersectionObserver(imageSection, {
   root: null,
   threshold: 0,
-  rootMargin: '+200px'
+  rootMargin: '200px'
 })
 
 images.forEach(image => imageObserver.observe(image))
+
+//////////////////////
+// Slider
+
+const sliderHandler = () => {
+  let currentSlide = 0;
+  const len = slides.length
+
+  const createDots = () => {
+    slides.forEach((_, i) => {
+      dotContainer.insertAdjacentHTML('beforeend', `<button class="dots__dot" data-slide="${i}"></button>`)
+    })
+  }
+
+  // activate dot
+  const activateDot = (slide) => {
+    document
+      .querySelectorAll('.dots__dot')
+      .forEach(dot => dot.classList.remove('dots__dot--active'))
+
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add('dots__dot--active')
+  }
+
+  const gotoSlide = (curr) => {
+    slides.forEach((slide, index) => {
+      slide.style.transform = `translateX(${(100 * (index - curr))}%)`
+      activateDot(curr)
+    })
+  }
+
+  // inital setup
+  const init = () => {
+    createDots()
+    gotoSlide(0)
+  }
+  init()
+
+  const nextSlide = () => {
+    currentSlide = (currentSlide === len - 1) ? 0 : currentSlide + 1;
+    gotoSlide(currentSlide)
+  }
+
+  const prevSlide = () => {
+    currentSlide = (currentSlide === 0) ? len - 1 : currentSlide - 1;
+    gotoSlide(currentSlide)
+  }
+
+  // Event Handlers : left and right btn
+  btnRight.addEventListener('click', nextSlide)
+  btnLeft.addEventListener('click', prevSlide)
+
+  // left and right arrow keys (keyboard events)
+  document.addEventListener('keydown', function (e) {
+    e.key === 'ArrowLeft' && prevSlide()
+    e.key === 'ArrowRight' && nextSlide()
+  })
+
+  // slide using dots
+  dotContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains("dots__dot")) {
+      const { slide } = e.target.dataset
+      gotoSlide(slide)
+    }
+  })
+}
+
+sliderHandler()
