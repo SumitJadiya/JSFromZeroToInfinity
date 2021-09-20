@@ -659,6 +659,21 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
     observer.observe(section1)
     ```
 
+  - show message to user before closing tab :
+
+    ```
+    window.addEventListener('beforeunload', function (e) {
+      e.preventDefault()
+      e.returnValue = "" // browser will throw popup for confirmation
+    })
+    ```
+
+  - defer and async script loading :
+
+    <img src='99OtherProjects/images/deferandasync.png' />
+
+    - For async, the script order not guaranteed to execute in order. For defer, the order is guaranteed.
+
   - Note :
 
     - e.currentTarget and this variable are same for normal methods but different for arrow fns

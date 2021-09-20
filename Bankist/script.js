@@ -58,7 +58,6 @@ const section1 = document.querySelector('#section--1')
 
 btnScrollTo.addEventListener('click', function (e) {
   const s1Coords = section1.getBoundingClientRect()
-  console.log(s1Coords)
   // old
   // window.scrollTo(s1Coords.left + window.pageXOffset, s1Coords.top + window.pageYOffset)
 
@@ -100,7 +99,6 @@ const handleScrolling = (e) => {
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault()
-  console.log(e.target)
 
   // pattern matching
   if (e.target.classList.contains('nav__link')) {
@@ -334,3 +332,11 @@ const sliderHandler = () => {
 }
 
 sliderHandler()
+
+// show message to user before closing tab
+/*
+window.addEventListener('beforeunload', function (e) {
+  e.preventDefault()
+  e.returnValue = "" // browser will throw popup for confirmation
+})
+*/
