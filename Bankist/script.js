@@ -196,7 +196,6 @@ const navHeight = nav.getBoundingClientRect().height
 
 const stickyNav = (entries) => {
   const [entry] = entries
-  console.log(entry)
 
   if (!entry.isIntersecting)
     nav.classList.add('sticky')
@@ -210,5 +209,29 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`
 })
 
-console.log(headerObserver)
 headerObserver.observe(header)
+
+//////////////////////
+// Reveal Elements on scroll
+let sections = document.querySelectorAll('.section')
+
+console.log(sections)
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden')
+  observer.unobserve(entry.target)
+}
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15
+})
+
+sections.forEach(section => {
+  sectionObserver.observe(section)
+  section.classList.add('section--hidden');
+})
