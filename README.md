@@ -688,6 +688,8 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
       }
       ```
 
+### OOPs
+
 ### Intermediate Level
 
 1.  Proto <br/>
