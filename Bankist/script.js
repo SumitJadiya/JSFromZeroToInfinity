@@ -337,6 +337,6 @@ sliderHandler()
 /*
 window.addEventListener('beforeunload', function (e) {
   e.preventDefault()
-  e.returnValue = "" // browser will throw popup for confirmation
+  e.returnValue = "" // b rowser will throw popup for confirmation
 })
 */

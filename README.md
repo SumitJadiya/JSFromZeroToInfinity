@@ -690,6 +690,82 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
 ### OOPs
 
+- Fundamental Priciples :
+
+  - Abstraction : Hide details that don't matter
+  - Encapsulation : keeping properties and method private inside class so they are not accessible outside the class
+  - Inheritance : Make all properties and method of certain class available to child class
+  - Polymorphism : child class can overwrite a method it inherited from a parent class
+
+- <a href='00OOPS/script.js'> Prototypal Inheritance </a>:
+
+  - The prototype contains methods (behaviour) that are accessible to all the objects linked to that prototype.
+  - Behaviour is delegated to the linked prototype object
+
+- Ways to implement Prototypal Inheritance
+
+  - Constructor Function
+
+    - Technique to create objects from a function
+    - This is built-in objects like Arrays, Maps or sets are actually implemented
+
+      ```
+      // constructor function
+      function Person () {
+        this.name = 'John',
+        this.age = 23
+      }
+
+      // create an object
+      const person = new Person();
+      ```
+
+  - ES6 classes
+
+    - Modern alternative to constructor function syntax (behind the scene works exactly like constructor function)
+    - ES6 classes do not behave like classes in "classical OOP"
+
+      ```
+      class Animal {
+
+      constructor(name, fierce){
+        this._name = name;
+        this._fierce = fierce;
+      }
+
+      get name() {
+        return this._name;
+      }
+
+      get fierce() {
+        return ` This animal is ${ this._fierce ? 'fierce' : 'tame' }`;
+      }
+
+      toString() {
+        return `This is a ${ this._fierce ? 'fierce' : 'tame' } ${this._name}`;
+      }
+
+      }
+      ```
+
+  - Object.create()
+
+    - The easiest and most straightforward way of linking an object to prototype object
+
+      ```
+      const PersonProto = {
+        calcAge: function () {
+          return new Date().getFullYear() - this.birthYear;
+        }
+      }
+
+      const steven = Object.create(PersonProto)
+      ```
+
+- Prototype Chain
+
+  - Object remains at the top in the chain
+
 ### Intermediate Level
 
 1.  Proto <br/>
