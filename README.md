@@ -766,22 +766,6 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
   - Object remains at the top in the chain
 
-### Intermediate Level
-
-1.  Proto <br/>
-2.  Object Chain <br/>
-3.  Self Executing Anonymous function --IIFE <br/>
-4.  Lexical Scoping <br/>
-5.  Closure <br/>
-6.  Curring [name()()()] <br/>
-7.  Binding (or bind) <br/>
-8.  Price Sorting Project <br/>
-9.  Scope <br/>
-10. Class and Objects<br/>
-11. Inheritance <br/>
-12. Event - Promise, Async, Await <br/>
-13. API Handling
-
 ### Javascript projects
 
 1.  Color Flipper <br/>
