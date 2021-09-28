@@ -533,6 +533,8 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
     clearInterval(timer)
     ```
 
+---
+
 ### DOM
 
 - Selecting, Creating, Deleting Element :
@@ -688,6 +690,8 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
       }
       ```
 
+---
+
 ### OOPs
 
 - Fundamental Priciples :
@@ -765,6 +769,34 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 - Prototype Chain
 
   - Object remains at the top in the chain
+
+- Encapsulation in JS :
+
+  - public fields
+
+  - public method
+
+  - private fields : indicated with # in front of variable name
+
+    ```
+    class Counter {
+      #count = 0
+
+      click () {
+        this.#count += 1;
+      }
+      getCount () {
+        return this.#count.toLocaleString()
+      }
+    }
+    const myCounter = new Counter();
+    myCounter.click();
+    console.log(myCounter.getCount());
+    ```
+
+  - private method
+
+---
 
 ### Javascript projects
 
