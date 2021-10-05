@@ -839,6 +839,26 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
       - Fulfilled : Success
       - Rejected : An error happened
 
+- Event Loop :
+
+  ```
+  console.log('Test start');
+  setTimeout(() => console.log('0 sec timer'), 0);
+  Promise.resolve('Resolved promise 1').then(res => console.log(res));
+  Promise.resolve('Resolved promise 2').then(res => {
+  for (let i = 0; i < 1000000000; i++) {}
+  console.log(res);
+  });
+  console.log('Test end');
+
+  Output :
+  Test start
+  Test end
+  Resolved promise 1 // due to microtask
+  Resolved promise 2 // due to microtask
+  0 sec timer
+  ```
+
 ---
 
 ### Javascript projects
