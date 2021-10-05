@@ -798,6 +798,49 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
 ---
 
+### Asynchronous JS
+
+- AJAX : Asynchronous Javascript and XML
+
+- Callback Hell : When we have a lot of nested callbacks in order to execute asynchronous tasks in sequence
+
+  ```
+  setTimeout(()=> {
+    console.log("1 sec passed")
+    setTimeout(()=> {
+      console.log("2 sec passed")
+      setTimeout(()=> {
+        console.log("3 sec passed")
+        .
+        .
+        .
+      }, 3000)
+    }, 2000)
+  }, 1000)
+  ```
+
+- Promises : It solves the problem of callback hell
+
+  ```
+  An object that is used as a placeholder for the future result of an asynchronous operation
+  or
+  A container for a future value
+
+  ```
+
+  - Advantage of promises :
+
+    - We no need to rely on events and callbacks passed into asynchronous functions to handle asynchronous results
+    - Instead of nesting callbacks, we can chain promises for a sequence of a asynchronous operation : 'escaping callback hell'
+
+  - Lifecycle of a promise :
+    - Pending : Before the future value is available
+    - Settled : Async task has finished
+      - Fulfilled : Success
+      - Rejected : An error happened
+
+---
+
 ### Javascript projects
 
 1.  Color Flipper <br/>
