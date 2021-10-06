@@ -819,7 +819,7 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   }, 1000)
   ```
 
-- Promises : It solves the problem of callback hell
+- Promises : It solves the problem of callback hell (known as promisifying)
 
   ```
   An object that is used as a placeholder for the future result of an asynchronous operation
@@ -827,6 +827,22 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   A container for a future value
 
   ```
+
+  - Promise Example
+
+    ```
+    const lotteryPromise = new Promise(function (resolve, reject) {
+      if (Math.random() >= 0.5) {
+          resolve('You Win')
+      } else {
+          reject('You Lose')
+      }
+    })
+
+    lotteryPromise
+      .then(res => console.log(res))
+      .catch(err => console.error(err))
+    ```
 
   - Advantage of promises :
 
@@ -858,6 +874,93 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   Resolved promise 2 // due to microtask
   0 sec timer
   ```
+
+- Promise Combinators :
+
+  - all - The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises. This returned promise will resolve when all of the input's promises have resolved, or if the input iterable contains no promises.
+
+    ```
+    const get3Countries = async function (c1, c2, c3) {
+        try {
+            const data = await Promise.all([
+                getJson(`https://restcountries.com/v2/name/${c1}`),
+                getJson(`https://restcountries.com/v2/name/${c2}`),
+                getJson(`https://restcountries.com/v2/name/${c3}`)
+            ])
+
+            console.log(data.map(d => d[0].capital))
+        }
+        catch (err) {
+            console.error(err.message)
+        }
+    }
+
+    get3Countries('portugal', 'canada', 'tanzania')
+    ```
+
+  - race - The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
+
+    ```
+    const promise1 = new Promise((resolve, reject) => {
+      setTimeout(resolve, 500, 'one');
+    });
+
+    const promise2 = new Promise((resolve, reject) => {
+      setTimeout(resolve, 100, 'two');
+    });
+
+    Promise.race([promise1, promise2]).then((value) => {
+      console.log(value);
+      // Both resolve, but promise2 is faster
+    });
+
+    Output:
+    "two"
+    ```
+
+  - allSettled - The Promise.allSettled() method returns a promise that resolves after all of the given promises have either fulfilled or rejected, with an array of objects that each describes the outcome of each promise.
+    <br/>
+    It is typically used when you have multiple asynchronous tasks that are not dependent on one another to complete successfully, or you'd always like to know the result of each promise.
+
+  - any - Promise.any() takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an AggregateError, a new subclass of Error that groups together individual errors.
+
+  ```
+  const promise1 = Promise.reject(0);
+  const promise2 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
+  const promise3 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
+  const promises = [promise1, promise2, promise3];
+
+  Promise.any(promises).then((value) => console.log(value));
+
+  output:
+  "quick"
+  ```
+
+---
+
+### Modern JS (ES6)
+
+- Modules :
+
+  - Reusable piece of code that encapsulates implementation details
+  - Usually a standalone file, but it doesn't have to be (generally modules are stored in files, one module per file)
+
+    ```
+    module example :
+
+    import {rand} as './math.js' // dependency
+    .
+    .
+    export {score} // public api
+    ```
+
+- Script vs Module
+
+  - Top level variables are scoped to module (in script, they're scoped as global)
+  - Default mode is strict mode (in script, default mode is sloppy)
+  - top level this points to undefined (in script, points to window object)
+  - import and exports possible in modules (not possible in scripts)
+  - HTML linking <script type="module"> (<script> for scripts)
 
 ---
 
