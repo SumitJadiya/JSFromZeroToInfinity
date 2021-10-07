@@ -1296,11 +1296,15 @@ The call method allows for a method that was defined for one object to be assign
 The only difference between the two is that call expects all parameters to be passed individually, whereas apply expects the second argument to be an array of all the parameters.
 
 The bind function creates a new function whose this value can be set to the value provided during the function call, enabling the calling of a function with a specified this value (the first parameter to bind function)
+or
+bind returns a partial function which can be used later for function call
 
+
+// Call and apply
 var animal = {
   animalInfo: function(sound,food) {
     return this.name + " is " + this.age + " years old" + " . He makes the sound "+ sound + " and eats " + food
-}
+  }
 }
 
 var cat = {
@@ -1309,6 +1313,206 @@ var cat = {
 }
 console.log(animal.animalInfo.call(cat,"meow", "fish"))
 console.log(animal.animalInfo.apply(cat,["meow", "fish"]))
+
+// Bind
+var obj = {
+    name:"Tom"
+};
+
+var info = function(a,b,c){
+    return this.name + " likes to eat " + a + " " + b + " and " +c;
+};
+
+//creates a bound function that has same body and parameters
+var bound = info.bind(obj,"Pasta");
+console.log(bound("Donuts","Chips","Cake")); //calling the bound function later
+```
+
+##### Q. Rest and Spread operator
+
+```
+Spread Operator:
+
+function sumOne(a, b) {
+    return a + b
+}
+const myA = [5, 4]
+console.log(sumOne(...myA))
+// Spread Operator -> Takes group and spread in multiple values
+
+Rest:
+
+function sumtwo(...args) { // REST Operator
+    let sum = 0;
+
+    for (const arg of args) {
+        sum += arg
+    }
+    return sum
+}
+
+console.log(sumtwo(2, 3, 1, 5, 7))
+```
+
+##### Q. Callback function
+
+```
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+or
+
+Callback function is stored in event table and will return to call stack when the right event occurs
+```
+
+##### Q. First Class Functions
+
+```
+the ability to use functions as values, passed as argument, returned from another method
+```
+
+##### Q. Reduce Method
+
+```
+It takes a callback function as a parameter and executes it for each element of the array, returning a single value at the end.
+
+ans.reduce((sum, records) => sum +records.value,0)
+```
+
+##### Q. Currying Functions
+
+```
+Currying transforms a function into a sequence of nesting functions. Basically, it converts a function
+
+from this:f(a,b,c)
+to this: f(a)(b)(c)
+
+It involves taking a function with multiple arguments and returning a sequence of nested functions, each taking a single argument, eventually resolving to a value.
+
+normal function:
+function multiply(a,b,c){
+  return a*b*c
+}
+console.log(multiply(2,3,4))
+
+Currying:
+function multiply(a) {
+    return (b) => {
+        return (c) => {
+            return a * b * c
+        }
+    }
+}
+console.log(multiply(2)(3)(4))
+```
+
+##### Q. Type Conversion vs Type Coercion
+
+```
+const inputYear = '1991'
+console.log((Number)inputYear + 10) // 2001 (type conversion)
+console.log(inputYear-10) // 1981 (type coercion)
+```
+
+##### Q. What are Falsy values
+
+```
+0, ''(empty String), NaN, undefined, null [5 falsy values in JS]
+```
+
+##### Q. Primitive types in JS
+
+```
+1. Number
+2. String
+3. Boolean
+4. Undefined
+5. null
+6. Symbol
+7. BigInt (ES2020)
+```
+
+##### Q. Transpiling / polyfilling
+
+```
+Transpiling is Converting modern JS code to ES5 once the app is complete inorder to support in old browsers. Babel is most useful tool for this.
+
+A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.
+```
+
+##### Q. What is "use strict"
+
+```
+“Strict mode” is a more restricted version of JavaScript, where semantics are altered to make the code more resilient and secure.
+In “strict mode,” some silent errors are changed to throw errors and disable some of the more confusing or undefined features in JavaScript.
+```
+
+##### Q. dot vs bracket in objects
+
+```
+const obj = {
+firstName: 'Sumit'
+}
+console.log(obj.firstName) // dot operator
+let name = 'Name'
+console.log(obj['firstName']) // bracket
+console.log(obj['first' + name]) // bracket
+```
+
+##### Q. Callback queue(Task Queue) vs Microtask queue
+
+```
+Callback queue: normal callbacks
+
+Microtask: callback functions coming through promises, mutation observer
+```
+
+##### Q. Explain Throttling
+
+```
+const mysleep = () => {
+
+    return new Promise(resolve => (
+        setTimeout(() => {
+            resolve("object")
+        }, 5000))
+    )
+}
+
+async function asyncCall() {
+    const result = await mysleep();
+    console.log(result);
+    console.log("hello")
+}
+
+asyncCall()
+```
+
+##### Q. Explain Debouncing
+
+```
+The main difference between throttling and debouncing is that throttling executes the function at a regular interval,
+while debouncing executes the function only after some cooling period.
+Debouncing and throttling are not something provided by JavaScript itself.
+```
+
+##### Q. Async and Await in JS
+
+```
+async is used before functions to make them asynchronous. Any function that has async before it always returns a promise.
+
+The await keyword can only be used inside async functions; otherwise, you get a syntax error. await makes the asynchronous function halt until the promise resolves.
+```
+
+##### Q. Pure functions
+
+```
+Pure functions are functions that take inputs and return the output value without affecting any variable outside of their scope.
+```
+
+##### Q. Higher-Order functions
+
+```
+Higher-Order functions accept functions as parameters or return a function as an output.
 ```
 
 ---
@@ -1332,7 +1536,3 @@ console.log(animal.animalInfo.apply(cat,["meow", "fish"]))
 15. Slider <br/>
 16. Slider-2 <br/>
 17. Stripe submenus <br/>
-
-```
-
-```
