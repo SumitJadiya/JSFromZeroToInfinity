@@ -962,6 +962,21 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
   - import and exports possible in modules (not possible in scripts)
   - HTML linking <script type="module"> (<script> for scripts)
 
+- Polyfill : A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.
+
+- Pure Function : A pure function is a function which:
+
+  - Given the same input, will always return the same output.
+  - Produces no side effects (which means that it can’t alter any external state.).
+
+    ```
+    So, `console.log( double(5) );` is the same as `console.log(10);`
+    ```
+
+---
+
+### QnA
+
 ---
 
 ### Javascript projects
