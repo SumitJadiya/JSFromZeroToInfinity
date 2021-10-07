@@ -980,7 +980,6 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 Q. difference between "var" and "let"
 
 ```
-A.
   let -> block scope
   var -> function scope
 
@@ -999,6 +998,310 @@ A.
   }
 
   x()
+```
+
+Q. "==" vs "==="
+
+```
+"==" compares only VALUE (does type coercion in background)
+"===" compares value and type (Strict)
+```
+
+Q. let vs const
+
+```
+after assignment we can't reassign const variable
+
+const c; // Uncaught SyntaxError: Missing initializer in const declaration
+c = 10;
+console.log(c)
+
+const x = [1, 20, 2]
+x.push(3)
+console.log(x)
+
+const y = [1, 20, 2]
+y = [1, 2, 4] // Uncaught TypeError: Assignment to constant variable.
+console.log(y)
+```
+
+Q. null vs undefined
+
+```
+if nothing assigned to variable then undefined, if null assigned then "null"
+```
+
+Q. prototypical inheritance
+
+```
+functions created using object prototype makes the function available to all the references
+
+let car = function(model) {
+    this.model = model
+}
+
+car.prototype.getModel = function() {
+    return this.model
+}
+
+let toyota = new car('toyota')
+console.log(toyota.getModel()) // inherited from parent
+```
+
+Q. fn declaration(or fn statement) vs fn expression
+
+```
+fn declaration is available even before definition. (fn expression is not available before definition)
+also, generally function expression is passed as parameter in methods (as it stores like variable, behaves like variable)
+
+console.log(funcD()) // function declaration /n undefined
+console.log(funcE()) // Uncaught ReferenceError: Cannot access 'funcE' before initialization
+
+function funcD() {
+    console.log("function declaration")
+}
+
+let funcE = () => {
+    console.log("function expression")
+}
+```
+
+Q. Usecase of setTimeout()
+
+```
+// b c 0 1 2 3 4 a
+
+for (let i = 0; i < 5; i++) {
+    setTimeout(function () {
+        console.log(i)
+    }, 0)
+}
+
+setTimeout(function () {
+    console.log('a')
+}, 0)
+console.log('b')
+console.log('c')
+```
+
+Q. Closures in JS
+
+```
+when function returning another function, the holding function will hold its environment ( basically all the variable it needed)
+or
+closure: function along with lexical scope forms closure
+
+Closures used in :
+- Module design pattern
+- Currying
+- Function like once
+- memoize
+- maintaining state in async world
+- setTimeouts
+- Iterators
+
+//closure: function along with lexical scope forms closure
+function x() {
+    var a = 7
+    function y() {
+        console.log(a) // fetch the value from lexical scope
+    }
+
+    y()
+}
+
+x()
+
+// another example
+function x() {
+    var a = 7
+    function y() {
+        console.log(a) // fetch the value from lexical scope
+    }
+
+    return y
+}
+
+var z = x()
+console.log(z) // closure : f y() { console.log(a) }
+z() // 7
+```
+
+Q. Output of console.log([]+[])
+
+```
+empty space
+
+console.log([] + []) // blank
+console.log([] + {}) // [object Object]
+console.log({} + []) // [object Object]
+console.log({} + {}) // [object Object][object Object]
+```
+
+Q. Scenario : <br/>
+
+function a() {
+return 'hello'
+}
+
+const sentence = a`h1`
+console.log(sentence) // hello
+
+```
+Output : hello
+```
+
+Q. What's document.body.contentEditable = true
+
+```
+we can edit any website live
+```
+
+Q. Predict Output : <br/>
+function y() {
+console.log(this.length) // 2 (size of argument)
+}
+
+var x = {
+length: 5,
+method: function (y) {arguments[0]();}
+}
+x.method(y, 1)
+
+```
+2
+```
+
+Q. Predict Output : <br/>
+const x = 'constructor'
+console.log(x[x](01)) // 1
+
+const y = 'constructorss'
+console.log(y[y](01)) // Uncaught TypeError: y[y] is not a function
+
+```
+1
+
+uncaught typeerror
+
+when x = 'constructor', x[x] is treated as a string function i.e. String()
+```
+
+Q. console.log(0.1+0.2)
+
+```
+"0.30000000000000004"
+```
+
+Q. Predict Output <br/>
+console.log(("h1").**proto**) // String
+console.log(("h1").**proto**.**proto**) // Object
+console.log(("h1").**proto**.**proto**.**proto**) // null
+
+```
+String
+Object
+Null
+```
+
+Q. print argument length of any method
+
+```
+let x = function () {
+    return [].slice.call(arguments).length
+}
+console.log(x(1, 2, 3, 4, 5)) // 5
+```
+
+Q. Predict Output
+
+```
+function x() {
+
+    for (var i = 1; i <= 5; i++) {
+
+        setTimeout(function () {
+            console.log(i)
+        }, 0)
+    }
+    console.log("message")
+}
+
+x()
+
+Output :
+message
+
+6
+6
+6
+6
+6
+(note: replace var with let to fix this)
+
+Fix using closure:
+
+function x() {
+
+    for (var i = 1; i <= 5; i++) {
+
+        function closure(i) {
+            setTimeout(function () {
+                console.log(i)
+            }, 0)
+        }
+
+        closure(i)
+    }
+    console.log("message")
+}
+
+x()
+```
+
+Q. What's Hoisting
+
+```
+process of accessing the variables/methods even before declaration
+
+getName() // message
+console.log(x) // undefined
+
+var x = 7
+function getName() {
+    console.log("message")
+}
+```
+
+Q. not defined vs undefined
+
+```
+if memory is not reserved for any variiable, that state is known as not defined.
+
+If memory is reserved for any variable, then the default value is undefined
+```
+
+Q. call vs apply vs bind (Function Borrowing)
+
+```
+The call method allows for a method that was defined for one object to be assigned and called on by another object.
+
+The only difference between the two is that call expects all parameters to be passed individually, whereas apply expects the second argument to be an array of all the parameters.
+
+The bind function creates a new function whose this value can be set to the value provided during the function call, enabling the calling of a function with a specified this value (the first parameter to bind function)
+
+var animal = {
+  animalInfo: function(sound,food) {
+    return this.name + " is " + this.age + " years old" + " . He makes the sound "+ sound + " and eats " + food
+  }
+}
+
+var cat = {
+  name : "Tom",
+  age : 5
+}
+console.log(animal.animalInfo.call(cat,"meow", "fish"))
+console.log(animal.animalInfo.apply(cat,["meow", "fish"]))
 ```
 
 ---
@@ -1022,14 +1325,3 @@ A.
 15. Slider <br/>
 16. Slider-2 <br/>
 17. Stripe submenus <br/>
-
----
-
-### Guess Number Project
-
-Random number generated by system, goal is to predict the number <br />
-
-<img src="99OtherProjects/images/07Project_guessMyNumber_before.png"> 
-<br/>
-<br/>
-<img src="99OtherProjects/images/07Project_guessMyNumber_after.png">
