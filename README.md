@@ -977,7 +977,7 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
 ### QnA
 
-Q. difference between "var" and "let"
+##### Q. difference between "var" and "let"
 
 ```
   let -> block scope
@@ -1000,14 +1000,14 @@ Q. difference between "var" and "let"
   x()
 ```
 
-Q. "==" vs "==="
+##### Q. "==" vs "==="
 
 ```
 "==" compares only VALUE (does type coercion in background)
 "===" compares value and type (Strict)
 ```
 
-Q. let vs const
+##### Q. let vs const
 
 ```
 after assignment we can't reassign const variable
@@ -1025,13 +1025,13 @@ y = [1, 2, 4] // Uncaught TypeError: Assignment to constant variable.
 console.log(y)
 ```
 
-Q. null vs undefined
+##### Q. null vs undefined
 
 ```
 if nothing assigned to variable then undefined, if null assigned then "null"
 ```
 
-Q. prototypical inheritance
+##### Q. prototypical inheritance
 
 ```
 functions created using object prototype makes the function available to all the references
@@ -1048,7 +1048,7 @@ let toyota = new car('toyota')
 console.log(toyota.getModel()) // inherited from parent
 ```
 
-Q. fn declaration(or fn statement) vs fn expression
+##### Q. fn declaration(or fn statement) vs fn expression
 
 ```
 fn declaration is available even before definition. (fn expression is not available before definition)
@@ -1066,7 +1066,7 @@ let funcE = () => {
 }
 ```
 
-Q. Usecase of setTimeout()
+##### Q. Usecase of setTimeout()
 
 ```
 // b c 0 1 2 3 4 a
@@ -1084,7 +1084,7 @@ console.log('b')
 console.log('c')
 ```
 
-Q. Closures in JS
+##### Q. Closures in JS
 
 ```
 when function returning another function, the holding function will hold its environment ( basically all the variable it needed)
@@ -1127,7 +1127,7 @@ console.log(z) // closure : f y() { console.log(a) }
 z() // 7
 ```
 
-Q. Output of console.log([]+[])
+##### Q. Output of console.log([]+[])
 
 ```
 empty space
@@ -1138,48 +1138,53 @@ console.log({} + []) // [object Object]
 console.log({} + {}) // [object Object][object Object]
 ```
 
-Q. Scenario : <br/>
+##### Q. Scenario : <br/>
 
+```
 function a() {
-return 'hello'
+  return 'hello'
 }
 
 const sentence = a`h1`
 console.log(sentence) // hello
 
-```
+
 Output : hello
 ```
 
-Q. What's document.body.contentEditable = true
+##### Q. What's document.body.contentEditable = true
 
 ```
 we can edit any website live
 ```
 
-Q. Predict Output : <br/>
+##### Q. Predict Output : <br/>
+
+```
 function y() {
-console.log(this.length) // 2 (size of argument)
+  console.log(this.length) // 2 (size of argument)
 }
 
 var x = {
-length: 5,
-method: function (y) {arguments[0]();}
+  length: 5,
+  method: function (y) {arguments[0]();}
 }
 x.method(y, 1)
 
-```
-2
+
+Output : 2
 ```
 
-Q. Predict Output : <br/>
+##### Q. Predict Output : <br/>
+
+```
 const x = 'constructor'
 console.log(x[x](01)) // 1
 
 const y = 'constructorss'
 console.log(y[y](01)) // Uncaught TypeError: y[y] is not a function
 
-```
+Output :
 1
 
 uncaught typeerror
@@ -1187,33 +1192,35 @@ uncaught typeerror
 when x = 'constructor', x[x] is treated as a string function i.e. String()
 ```
 
-Q. console.log(0.1+0.2)
+##### Q. console.log(0.1+0.2)
 
 ```
 "0.30000000000000004"
 ```
 
-Q. Predict Output <br/>
+##### Q. Predict Output <br/>
+
+```
 console.log(("h1").**proto**) // String
 console.log(("h1").**proto**.**proto**) // Object
 console.log(("h1").**proto**.**proto**.**proto**) // null
 
-```
+Output:
 String
 Object
 Null
 ```
 
-Q. print argument length of any method
+##### Q. print argument length of any method
 
 ```
 let x = function () {
-    return [].slice.call(arguments).length
+  return [].slice.call(arguments).length
 }
 console.log(x(1, 2, 3, 4, 5)) // 5
 ```
 
-Q. Predict Output
+##### Q. Predict Output
 
 ```
 function x() {
@@ -1259,7 +1266,7 @@ function x() {
 x()
 ```
 
-Q. What's Hoisting
+##### Q. What's Hoisting
 
 ```
 process of accessing the variables/methods even before declaration
@@ -1269,11 +1276,11 @@ console.log(x) // undefined
 
 var x = 7
 function getName() {
-    console.log("message")
+  console.log("message")
 }
 ```
 
-Q. not defined vs undefined
+##### Q. not defined vs undefined
 
 ```
 if memory is not reserved for any variiable, that state is known as not defined.
@@ -1281,7 +1288,7 @@ if memory is not reserved for any variiable, that state is known as not defined.
 If memory is reserved for any variable, then the default value is undefined
 ```
 
-Q. call vs apply vs bind (Function Borrowing)
+##### Q. call vs apply vs bind (Function Borrowing)
 
 ```
 The call method allows for a method that was defined for one object to be assigned and called on by another object.
@@ -1293,7 +1300,7 @@ The bind function creates a new function whose this value can be set to the valu
 var animal = {
   animalInfo: function(sound,food) {
     return this.name + " is " + this.age + " years old" + " . He makes the sound "+ sound + " and eats " + food
-  }
+}
 }
 
 var cat = {
@@ -1325,3 +1332,7 @@ console.log(animal.animalInfo.apply(cat,["meow", "fish"]))
 15. Slider <br/>
 16. Slider-2 <br/>
 17. Stripe submenus <br/>
+
+```
+
+```
