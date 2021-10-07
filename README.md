@@ -977,6 +977,30 @@ More on <a href="./03Intermediate/04hoisting.js"> Hoisting </a><br/>
 
 ### QnA
 
+Q. difference between "var" and "let"
+
+```
+A.
+  let -> block scope
+  var -> function scope
+
+  // var vs let
+  let x = function () {
+      if (true) {
+          console.log(v) // undefined (hoisting)
+          console.log(l) // script.js:5 Uncaught ReferenceError: Cannot access 'l' before initialization
+
+          var v = 2
+          let l = 1
+      }
+      // if previous console logs are removed
+      console.log(v) // 2
+      console.log(l) // Uncaught ReferenceError: l is not defined
+  }
+
+  x()
+```
+
 ---
 
 ### Javascript projects
