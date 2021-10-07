@@ -1515,6 +1515,10 @@ Pure functions are functions that take inputs and return the output value withou
 Higher-Order functions accept functions as parameters or return a function as an output.
 ```
 
+##### Q. Can (a== 1 && a ==2 && a==3) ever evaluate to true?
+
+Yes, https://stackoverflow.com/questions/48270127/can-a-1-a-2-a-3-ever-evaluate-to-true
+
 ---
 
 ### Javascript projects
