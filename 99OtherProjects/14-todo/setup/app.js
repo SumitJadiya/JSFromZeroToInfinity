@@ -1,15 +1,14 @@
 /*
 Steps:
-1. create new node and append to list
-2. show alert on adding / editing / delete
-3. Edit Item
-4. Delete Item 
-5. Clear Items 
-6. Set to local Storage
-7. Edit in local Storage -> In progress
-8. Delete in local Storage
-9. Display all items after loading page
-
+    1. create new node and append to list
+    2. show alert on adding / editing / delete
+    3. Edit Item
+    4. Delete Item 
+    5. Clear Items 
+    6. Set to local Storage
+    7. Edit in local Storage -> In progress
+    8. Delete in local Storage
+    9. Display all items after loading page
 */
 
 // ****** SELECT ITEMS **********
@@ -26,42 +25,44 @@ let editFlag = false
 let editId
 
 // ****** EVENT LISTENERS **********
-submitBtn.addEventListener("click", e => {
-    e.preventDefault()
-    value = inputField.value
+function init() {
 
-    // add item
-    if (value !== "" && !editFlag) {
-        addGroceryItem(value)
-        displayAlert("Grocery Item added Successfully!", "success")
-    }
-    // edit item
-    else if (value !== "" && editFlag) {
-        editElement.innerHTML = value
-        editLocalStorage(editId, value)
-        displayAlert("Grocery Item updated Successfully!", "success")
-    }
-    // Invalid value
-    else {
-        displayAlert("Invalid Grocery Item", "danger")
-    }
+    submitBtn.addEventListener("click", e => {
+        e.preventDefault()
+        value = inputField.value
 
-    setDefaults()
-})
+        // add item
+        if (value !== "" && !editFlag) {
+            addGroceryItem(value)
+            displayAlert("Grocery Item added Successfully!", "success")
+        }
+        // edit item
+        else if (value !== "" && editFlag) {
+            editElement.innerHTML = value
+            editLocalStorage(editId, value)
+            displayAlert("Grocery Item updated Successfully!", "success")
+        }
+        // Invalid value
+        else
+            displayAlert("Invalid Grocery Item", "danger")
 
-// remove all items
-clearAll.addEventListener("click", () => {
-    let childNodes = document.querySelectorAll(".grocery-item")
+        setDefaults()
+    })
 
-    localStorage.removeItem("grocery-item")
-    childNodes.forEach(child => groceryList.removeChild(child))
+    // remove all items
+    clearAll.addEventListener("click", () => {
+        let childNodes = document.querySelectorAll(".grocery-item")
 
-    displayAlert("All grocery Items removed", "danger")
-    groceryContainer.classList.remove("show-container");
-    setDefaults()
-})
+        localStorage.removeItem("grocery-item")
+        childNodes.forEach(child => groceryList.removeChild(child))
 
-window.addEventListener("DOMContentLoaded", () => displayAllItems());
+        displayAlert("All grocery Items removed", "danger")
+        groceryContainer.classList.remove("show-container");
+        setDefaults()
+    })
+
+    window.addEventListener("DOMContentLoaded", () => displayAllItems());
+}
 
 // ****** FUNCTIONS **********
 const addGroceryItem = item => {
@@ -139,9 +140,7 @@ const addToLocalStorage = (id, value) => {
     localStorage.setItem("grocery-item", JSON.stringify(items));
 }
 
-const getLocalStorage = () => {
-    return localStorage.getItem("grocery-item") ? JSON.parse(localStorage.getItem("grocery-item")) : [];
-}
+const getLocalStorage = () => localStorage.getItem("grocery-item") ? JSON.parse(localStorage.getItem("grocery-item")) : [];
 
 const editLocalStorage = (id, value) => {
 
@@ -180,3 +179,5 @@ const displayAllItems = () => {
     })
 }
 
+// ****** INITIALIZE ITEMS **********
+init()
